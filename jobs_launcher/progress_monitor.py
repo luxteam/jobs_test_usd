@@ -41,7 +41,7 @@ def get_cases_existence_info_by_hashes(session_dir, suite_name, test_cases):
     cases_hashes_info = {}
     cases_hashes = {}
     for case in test_cases:
-        with open(os.path.join(session_dir, suite_name, case + '_RPR.json')) as case_file:
+        with open(os.path.join(session_dir, suite_name, case + '_USD.json')) as case_file:
             case_file_data = json.load(case_file)[0]
             with open(render_color_full_path(session_dir, suite_name, case_file_data['render_color_path']), 'rb') as img:
                 bytes_data = img.read()
@@ -99,7 +99,7 @@ def send_finished_cases(session_dir, suite_name):
         minio_client_dev.upload_file(test_cases_path, ums_client_dev.build_id, ums_client_dev.suite_id)
     for test_case in new_test_cases:
         print('Sending artefacts & images for: {}'.format(test_case))
-        with open(os.path.join(session_dir, suite_name, test_case + '_RPR.json')) as case_file:
+        with open(os.path.join(session_dir, suite_name, test_case + '_USD.json')) as case_file:
             case_file_data = json.load(case_file)[0]
 
             if test_case in new_cases_existence_hashes_info and \
@@ -113,7 +113,7 @@ def send_finished_cases(session_dir, suite_name):
                 print("Upload new image for case: {} and get image id: {}".format(test_case, image_id))
             case_file_data['image_service_id'] = image_id
 
-        with open(os.path.join(session_dir, suite_name, test_case + '_RPR.json'), 'w') as case_file:
+        with open(os.path.join(session_dir, suite_name, test_case + '_USD.json'), 'w') as case_file:
             json.dump([case_file_data], case_file, indent=4, sort_keys=True)
 
     transferred_test_cases += list(new_test_cases.keys())

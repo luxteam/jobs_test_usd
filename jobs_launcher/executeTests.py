@@ -278,7 +278,7 @@ def main():
                         else:
                             rendered_image = ''
                             # FIXME: refactor report building of Core: make reports parallel with render
-                            test_case_path = os.path.join(session_dir, suite_name, case['test_case'] + '_RPR.json')
+                            test_case_path = os.path.join(session_dir, suite_name, case['test_case'] + '_USD.json')
                             if os.path.exists(test_case_path):
                                 with open(test_case_path) as file:
                                     data = json.load(file)[0]

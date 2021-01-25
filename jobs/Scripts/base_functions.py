@@ -7,11 +7,8 @@ import re
 import os.path as path
 import os
 import sys
-import pyrpr
 import glob
 from shutil import copyfile
-from rprblender import material_library
-from rprblender.utils.user_settings import get_user_settings
 
 WORK_DIR = r'{work_dir}'
 TEST_TYPE = '{testType}'
@@ -35,12 +32,12 @@ def event(name, start, case):
 
 
 def logging(message):
-    print(' >>> [RPR TEST] [' +
+    print(' >>> [USD TEST] [' +
           datetime.datetime.now().strftime('%H:%M:%S') + '] ' + message)
 
 
 def reportToJSON(case, render_time=0):
-    path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+    path_to_file = path.join(WORK_DIR, case['case'] + '_USD.json')
 
     with open(path_to_file, 'r') as file:
         report = json.loads(file.read())[0]
@@ -85,8 +82,6 @@ def reportToJSON(case, render_time=0):
         report['tool'] = 'Blender ' + bpy.app.version_string.split(' (')[0]
     except Exception as e:
         logging('Failed to get Blender version. Reason: {{}}'.format(str(e)))
-    report['render_version'] = get_addon_version()
-    report['core_version'] = get_core_version()
 
     # save metrics which can't be received witout call of functions of Blender (additional measures to avoid stucking of Blender)
     with open(path_to_file, 'w') as file:
@@ -99,19 +94,9 @@ def render_tool_log_path(name):
 # TODO: remove support for deprecated core
 
 
-def get_core_version():
-    try:
-        import pyrprwrap
-        if hasattr(pyrprwrap, 'VERSION_MAJOR_MINOR_REVISION'):
-            return '{{}}.{{}}.{{}}'.format(pyrprwrap.VERSION_MAJOR,
-                                           pyrprwrap.VERSION_MINOR,
-                                           pyrprwrap.VERSION_REVISION)
-    except Exception as e:
-        logging('Failed to get core version. Reason: {{}}'.format(str(e)))
-    return ""
-
 
 def enable_usd(case):
+    addon_utils.disable('rprblender')
     event('Load usd', True, case)
     if not addon_utils.check('hdusd')[0]:
         addon_utils.enable('hdusd', default_set=True,
@@ -119,39 +104,13 @@ def enable_usd(case):
     set_value(bpy.context.scene.render, 'engine', 'HdUSD')
     event('Load usd', False, case)
 
-
-def get_addon_version():
-    try:
-        tuple_ver = sys.modules['rprblender'].bl_info['version']
-        version = str(tuple_ver[0]) + '.' + \
-            str(tuple_ver[1]) + '.' + str(tuple_ver[2])
-        return version
-    except Exception as e:
-        logging('Failed to get plugin version. Reason: {{}}'.format(str(e)))
-    return ""
-
+    
 
 def set_value(path, name, value):
     if hasattr(path, name):
         setattr(path, name, value)
     else:
         logging('No attribute found ' + name)
-
-
-def set_render_device(render_mode):
-    render_device_settings = get_user_settings().final_devices
-    if render_mode == 'dual':
-        render_device_settings.gpu_states[0] = True
-        set_value(render_device_settings, 'cpu_state', True)
-    elif render_mode == 'cpu':
-        set_value(render_device_settings, 'cpu_state', True)
-        render_device_settings.gpu_states[0] = False
-    elif render_mode == 'gpu':
-        set_value(render_device_settings, 'cpu_state', False)
-        render_device_settings.gpu_states[0] = True
-    device_name = pyrpr.Context.gpu_devices[0]['name']
-
-    return device_name
 
 
 def usd_render(case):
@@ -186,21 +145,11 @@ def prerender(case):
 
     scene = bpy.context.scene
 
-    set_value(scene.rpr, 'render_quality', ENGINE)
-
-    device_name = set_render_device(RENDER_DEVICE)
-
     if RESOLUTION_X and RESOLUTION_Y:
         set_value(scene.render, 'resolution_x', RESOLUTION_X)
         set_value(scene.render, 'resolution_y', RESOLUTION_Y)
 
     set_value(scene.render.image_settings, 'file_format', 'JPEG')
-    set_value(scene.rpr.limits, 'noise_threshold', THRESHOLD)
-
-    set_value(scene.rpr.limits, 'min_samples', 16)
-    set_value(scene.rpr.limits, 'max_samples', PASS_LIMIT)
-
-    set_value(scene.rpr, 'use_render_stamp', False)
 
     # image settings
     set_value(scene.render.image_settings, 'quality', 100)
@@ -213,8 +162,6 @@ def prerender(case):
     set_value(scene.render, 'use_placeholder', True)
     set_value(scene.render, 'use_file_extension', True)
     set_value(scene.render, 'use_overwrite', True)
-
-    set_value(scene.rpr, 'log_min_level', 'INFO')
 
     for function in case['functions']:
         try:
@@ -301,7 +248,7 @@ def main():
 
             logging('In progress: ' + case['case'])
 
-            path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+            path_to_file = path.join(WORK_DIR, case['case'] + '_USD.json')
             with open(path_to_file, 'r') as file:
                 report = json.loads(file.read())[0]
 

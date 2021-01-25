@@ -120,11 +120,6 @@ def athena_disable(disable, tool):
 def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
 
-    if args.testType in ['Athena']:
-        ATHENA_DIR = athena_disable(False, args.tool)
-    else:
-        ATHENA_DIR = athena_disable(True, args.tool)
-
     core_config.main_logger.info('Make "base_functions.py"')
 
     try:
@@ -147,6 +142,7 @@ def main(args):
         with open(os.path.join(os.path.dirname(__file__), 'extensions', args.testType + '.py')) as f:
             extension_script = f.read()
         script = script.split('# place for extension functions')
+        ATHENA_DIR = ""
         script = script[0] + "ATHENA_DIR=\"{}\"\n".format(ATHENA_DIR.replace('\\', '\\\\')) + extension_script + script[1]
 
     work_dir = os.path.abspath(args.output)
