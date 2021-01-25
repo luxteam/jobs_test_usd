@@ -1,0 +1,99 @@
+[
+    {
+        "case": "BL28_RS_AN_001",        
+        "status": "active",
+        "functions": [
+            "scene.frame_set(41)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame: 41",
+            "https://amdrender.atlassian.net/browse/RPRBLND-1533"
+        ],
+        "scene": "Keyed_Animation.blend",
+        "skip_engine": [
+            "FULL2"
+        ]
+    },
+    {
+        "case": "BL28_RS_AN_002",
+        "status": "active",
+        "functions": [
+            "scene.frame_set(85)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame: 85",
+            "https://amdrender.atlassian.net/browse/RPRBLND-1533"
+        ],
+        "scene": "Keyed_Animation.blend",
+        "skip_engine": [
+            "FULL2"
+        ]
+    },
+    {
+        "case": "BL28_RS_AN_003",
+        "status": "active",
+        "functions": [
+            "scene.frame_set(150)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame: 150",
+            "https://amdrender.atlassian.net/browse/RPRBLND-1533"
+        ],
+        "scene": "Keyed_Animation.blend",
+        "skip_engine": [
+            "FULL2"
+        ]
+    },
+    {
+        "case": "BL28_RS_AN_004",
+        "status": "active",
+        "functions": [
+            "scene.frame_set(30)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame: 30"
+        ],
+        "scene": "NonKeyed_Animation.blend"
+    },
+    {
+        "case": "BL28_RS_AN_005",
+        "status": "active",
+        "functions": [
+            "scene.frame_set(75)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame: 75"
+        ],
+        "scene": "NonKeyed_Animation.blend"
+    },
+    {
+        "case": "BL28_RS_AN_006",
+        "status": "active",
+        "functions": [
+            "scene.frame_set(100)",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame: 100"
+        ],
+        "scene": "NonKeyed_Animation.blend"
+    },
+    {
+        "case": "BL28_RS_AN_007",
+        "status": "active",
+        "functions": [
+            "scene.frame_set(100)",
+            "bpy.data.scenes['Scene'].render.frame_map_old = 50",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Frame mapping"
+        ],
+        "scene": "NonKeyed_Animation.blend"
+    }
+]

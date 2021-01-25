@@ -1,0 +1,131 @@
+[
+    {
+        "case": "BL28_MAT_PTC_001",
+        "status": "active",
+        "script_info": [
+            "Type - Object"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_002",
+        "status": "active",
+        "script_info": [
+            "Type - Object",
+            "Scale - 0.01"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "bpy.data.particles['ParticleSettings'].particle_size = 0.01",
+            "rpr_render(case)",
+            "bpy.data.particles['ParticleSettings'].particle_size = 0.03"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_003",
+        "status": "active",
+        "script_info": [
+            "Type - Object",
+            "Scale - 0.05"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "bpy.data.particles['ParticleSettings'].particle_size = 0.05",
+            "rpr_render(case)",
+            "bpy.data.particles['ParticleSettings'].particle_size = 0.03"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_004",
+        "status": "active",
+        "script_info": [
+            "Type - Object",
+            "Scale randomness - 0.02"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "bpy.data.particles['ParticleSettings'].size_random = 0.02",
+            "rpr_render(case)",
+            "bpy.data.particles['ParticleSettings'].size_random = 0"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_005",
+        "status": "active",
+        "script_info": [
+            "Type - Object",
+            "Object rotation"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "bpy.data.particles['ParticleSettings'].use_rotation_instance = True",
+            "rpr_render(case)",
+            "bpy.data.particles['ParticleSettings'].use_rotation_instance = False"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_006",
+        "status": "active",
+        "script_info": [
+            "Type - Object",
+            "Parent particles"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "bpy.data.particles['ParticleSettings'].use_parent_particles = True",
+            "rpr_render(case)",
+            "bpy.data.particles['ParticleSettings'].use_parent_particles = False"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_007",
+        "status": "active",
+        "script_info": [
+            "Type - Object",
+            "Unborn"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "bpy.data.particles['ParticleSettings'].show_unborn = True",
+            "rpr_render(case)",
+            "bpy.data.particles['ParticleSettings'].show_unborn = False"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_008",
+        "status": "active",
+        "script_info": [
+            "Type - Object",
+            "Dead"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'OBJECT'",
+            "bpy.data.particles['ParticleSettings'].use_dead = True",
+            "rpr_render(case)",
+            "bpy.data.particles['ParticleSettings'].use_dead = False"
+        ]
+    },
+    {
+        "case": "BL28_MAT_PTC_009",
+        "status": "active",
+        "script_info": [
+            "Type - Collection"
+        ],
+        "scene": "RPR_ParticlesTest.blend",
+        "functions": [
+            "bpy.data.particles['ParticleSettings'].render_type = 'COLLECTION'",
+            "rpr_render(case)"
+        ]
+    }
+]

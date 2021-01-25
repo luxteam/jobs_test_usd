@@ -1,0 +1,604 @@
+[    
+    {
+        "case": "BL28_RS_RM_001",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_002",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index -",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_003",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index +",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_004",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_005",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_006",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index -",
+            "Shading Normal +"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_007",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index +",
+            "Shading Normal +"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_008",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_009",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Line Width 0",
+            "Material Index -",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_object_id_line_width = 0",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_010",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Line Width 0.1",
+            "Material Index -",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_object_id_line_width = 0.1",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_011",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Line Width 10",
+            "Material Index -",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_object_id_line_width = 10",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_012",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index +",
+            "Line Width 0",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_material_id_line_width = 0",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_013",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index +",
+            "Line Width 0.1",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_material_id_line_width = 0.1",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_014",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index +",
+            "Line Width 10",
+            "Shading Normal -"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_material_id_line_width = 10",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = False",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_015",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +",
+            "Line Width 0"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 0",
+            "bpy.data.scenes['Scene'].rpr.contour_shading_normal_line_width = 0",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_016",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +",
+            "Line Width 0.1"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 0",
+            "bpy.data.scenes['Scene'].rpr.contour_shading_normal_line_width = 0.1",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_017",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +",
+            "Line Width 10"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 0",
+            "bpy.data.scenes['Scene'].rpr.contour_shading_normal_line_width = 10",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_018",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +",
+            "Threshold 0"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 0",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_019",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +",
+            "Threshold 89.9"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 89.9",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_020",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +",
+            "Threshold 90"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 90",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_021",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID -",
+            "Material Index -",
+            "Shading Normal +",
+            "Threshold 180"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = False",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_normal_threshold = 180",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_022",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "Antialiasing 0.5"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_antialiasing = 0.5",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_023",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "Antialiasing 0.1"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "bpy.data.scenes['Scene'].rpr.contour_antialiasing = 0.1",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_024",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "Antialiasing 0"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_025",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "ML Color only"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'enable', True)",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'ml_color_only', True)",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_026",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "ML Color + AOV"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'enable', True)",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'filter_type', 'ML')",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'ml_color_only', False)",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_027",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "Bileteral"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'enable', True)",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'filter_type', 'BILATERAL')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_028",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "EAW"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'enable', True)",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'filter_type', 'EAW')",
+            "rpr_render(case)"
+        ]
+    },
+    {
+        "case": "BL28_RS_RM_029",
+        "status": "active",
+        "script_info": [
+            "Contour",
+            "Object ID +",
+            "Material Index +",
+            "Shading Normal +",
+            "LWR"
+        ],
+        "scene": "9_sun_light.blend",
+        "functions": [
+            "resetContour()",
+            "bpy.data.scenes['Scene'].rpr.use_contour_render = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_object_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_material_id = True",
+            "bpy.data.scenes['Scene'].rpr.contour_use_shading_normal = True",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'enable', True)",
+            "set_value(bpy.data.scenes['Scene'].rpr.denoiser, 'filter_type', 'LWR')",
+            "rpr_render(case)"
+        ]
+    }
+]

@@ -1,0 +1,14 @@
+[
+	{
+		"case": "BL28_SM_004",
+		"status": "active",
+		"functions": [
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Render empty scene",
+			"Pass Limit: 50"
+		],
+		"scene": "usd_smoke.blend"
+	}
+]

@@ -1,0 +1,993 @@
+[
+    {
+        "case": "BL28_MAT_IMAGE_001",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Linear ACES'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Sphere",
+            "Extension: Clip",
+            "Source: Movie",
+            "Color Space: Linear ACES"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_002",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Non-Color'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Tube",
+            "Extension: Repeat",
+            "Source: Generated",
+            "Color Space: Non-Color"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_003",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/Dice.1001.jpg', directory=RES_PATH + '//Maps//', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['Dice.1001.jpg']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['Dice.1001.jpg'].source = 'TILED'",
+            "bpy.data.images['Dice.1001.jpg'].colorspace_settings.name = 'Raw'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Flat",
+            "Extension: Extend",
+            "Source: UDIM Tiles",
+            "Color Space: RAW"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_004",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Raw'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Box",
+            "Extension: Clip",
+            "Source: Generated",
+            "Color Space: RAW"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_005",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/Dice.1001.jpg', directory=RES_PATH + '//Maps//', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['Dice.1001.jpg']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['Dice.1001.jpg'].source = 'TILED'",
+            "bpy.data.images['Dice.1001.jpg'].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Sphere",
+            "Extension: Repeat",
+            "Source: UDIM Tiles",
+            "Color Space: sRGB"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_006",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'XYZ'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Tube",
+            "Extension: Extend",
+            "Source: Single Image",
+            "Color Space: XYZ"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_007",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Filmic Log'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Flat",
+            "Extension: Clip",
+            "Source: Image Sequence",
+            "Color Space: Filmic Log",
+            "Sequence Frame - 1"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_008",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: Single Image",
+            "Color Space: Linear"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_009",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Non-Color'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Flat",
+            "Extension: Extend",
+            "Source: Movie",
+            "Color Space: Non-Color"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_010",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Linear'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Sphere",
+            "Extension: Extend",
+            "Source: Image Sequence",
+            "Color Space: Linear",
+            "Sequence Frame - 2"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_011",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear ACES'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Tube",
+            "Extension: Clip",
+            "Source: Single Image",
+            "Color Space: Linear ACES"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_012",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Raw'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: Movie",
+            "Color Space: RAW"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_013",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Sphere",
+            "Extension: Extend",
+            "Source: Generated",
+            "Color Space: sRGB"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_014",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/Dice.1001.jpg', directory=RES_PATH + '//Maps//', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['Dice.1001.jpg']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['Dice.1001.jpg'].source = 'TILED'",
+            "bpy.data.images['Dice.1001.jpg'].colorspace_settings.name = 'XYZ'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Flat",
+            "Extension: Clip",
+            "Source: UDIM Tiles",
+            "Color Space: XYZ"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_015",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Filmic Log'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: Single Image",
+            "Color Space: Filmic Log"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_016",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Tube",
+            "Extension: Repeat",
+            "Source: Movie",
+            "Color Space: sRGB"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_017",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'XYZ'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Flat",
+            "Extension: Repeat",
+            "Source: Generated",
+            "Color Space: XYZ"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_018",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/Dice.1001.jpg', directory=RES_PATH + '//Maps//', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['Dice.1001.jpg']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['Dice.1001.jpg'].source = 'TILED'",
+            "bpy.data.images['Dice.1001.jpg'].colorspace_settings.name = 'Filmic Log'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Box",
+            "Extension: Extend",
+            "Source: UDIM Tiles",
+            "Color Space: Filmic Log"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_019",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Sphere",
+            "Extension: Clip",
+            "Source: Single Image",
+            "Color Space: Linear"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_020",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Linear ACES'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Flat",
+            "Extension: Repeat",
+            "Source: Image Sequence",
+            "Color Space: Linear ACES",
+            "Sequence Frame - 1"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_021",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear ACES'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Flat",
+            "Extension: Extend",
+            "Source: Single Image",
+            "Color Space: Linear ACES"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_022",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Non-Color'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Box",
+            "Extension: Clip",
+            "Source: Image Sequence",
+            "Color Space: Non-Color",
+            "Sequence Frame - 2"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_023",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Raw'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Sphere",
+            "Extension: Repeat",
+            "Source: Single Image",
+            "Color Space: RAW"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_024",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Flat",
+            "Extension: Extend",
+            "Source: Image Sequence",
+            "Color Space: sRGB",
+            "Sequence Frame - 1"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_025",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'XYZ'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Box",
+            "Extension: Clip",
+            "Source: Movie",
+            "Color Space: XYZ"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_026",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Filmic Log'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Sphere",
+            "Extension: Repeat",
+            "Source: Generated",
+            "Color Space: Filmic Log"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_027",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/Dice.1001.jpg', directory=RES_PATH + '//Maps//', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['Dice.1001.jpg']",
+            "Im_node().interpolation = 'Closest'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['Dice.1001.jpg'].source = 'TILED'",
+            "bpy.data.images['Dice.1001.jpg'].colorspace_settings.name = 'Linear'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Closest",
+            "Projection: Tube",
+            "Extension: Repeat",
+            "Source: UDIM Tiles",
+            "Color Space: Linear"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_028",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'XYZ'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: Image Sequence",
+            "Color Space: XYZ",
+            "Sequence Frame - 2"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_029",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Filmic Log'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Sphere",
+            "Extension: Extend",
+            "Source: Movie",
+            "Color Space: Filmic Log"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_030",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Flat",
+            "Extension: Clip",
+            "Source: Generated",
+            "Color Space: Linear"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_031",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/Dice.1001.jpg', directory=RES_PATH + '//Maps//', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['Dice.1001.jpg']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['Dice.1001.jpg'].source = 'TILED'",
+            "bpy.data.images['Dice.1001.jpg'].colorspace_settings.name = 'Linear ACES'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: UDIM Tiles",
+            "Color Space: Linear ACES"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_032",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Non-Color'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Sphere",
+            "Extension: Repeat",
+            "Source: Single Image",
+            "Color Space: Non-Color"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_033",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Raw'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Tube",
+            "Extension: Extend",
+            "Source: Image Sequence",
+            "Color Space: RAW",
+            "Sequence Frame - 1"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_034",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Cubic'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Cubic",
+            "Projection: Flat",
+            "Extension: Clip",
+            "Source: Single Image",
+            "Color Space: sRGB"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_035",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/Dice.1001.jpg', directory=RES_PATH + '//Maps//', files=[{'name':'Dice.1001.jpg'}, {'name':'Dice.1002.jpg'}, {'name':'Dice.1003.jpg'}, {'name':'Dice.1004.jpg'}, {'name':'Dice.1005.jpg'}, {'name':'Dice.1006.jpg'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['Dice.1001.jpg']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['Dice.1001.jpg'].source = 'TILED'",
+            "bpy.data.images['Dice.1001.jpg'].colorspace_settings.name = 'Non-Color'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Sphere",
+            "Extension: Clip",
+            "Source: UDIM Tiles",
+            "Color Space: Non-Color"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_036",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Raw'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Flat",
+            "Extension: Repeat",
+            "Source: Single Image",
+            "Color Space: RAW"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_037",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 1",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: Image Sequence",
+            "Color Space: sRGB",
+            "Sequence Frame - 2"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_038",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'SPHERE'",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'FILE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'XYZ'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Sphere",
+            "Extension: Extend",
+            "Source: Single Image",
+            "Color Space: XYZ"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_039",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Materials/Maps/seq_1.png', directory=RES_PATH + '//Maps//', files=[{'name':'seq_1.png'}, {'name':'seq_2.png'}], show_multiview=False)",
+            "Im_node().image = bpy.data.images['seq_1.png']",
+            "Im_node().image_user.frame_duration = 2",
+            "Im_node().image_user.frame_offset = 0",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'TUBE'",
+            "Im_node().extension = 'CLIP'",
+            "bpy.data.images['seq_1.png'].source = 'SEQUENCE'",
+            "bpy.data.images['seq_1.png'].colorspace_settings.name = 'Filmic Log'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Tube",
+            "Extension: Clip",
+            "Source: Image Sequence",
+            "Color Space: Filmic Log",
+            "Sequence Frame - 1"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_040",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['sample-mov-file.mov'].source = 'MOVIE'",
+            "bpy.data.images['sample-mov-file.mov'].colorspace_settings.name = 'Linear'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Flat",
+            "Extension: Repeat",
+            "Source: Movie",
+            "Color Space: Linear"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_041",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0.620455",
+            "Im_node().extension = 'EXTEND'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Linear ACES'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Box",
+            "Extension: Extend",
+            "Source: Generated",
+            "Color Space: Linear ACES"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_042",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 0",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: Single Image",
+            "Color Space: sRGB",
+            "Blend - 0"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_043",
+        "status": "active",
+        "functions": [
+            "bpy.ops.image.open(filepath='//Maps/sample-mov-file.mov', directory=RES_PATH + '//Maps//', files=[{'name':'sample-mov-file.mov'}], relative_path=True, show_multiview=False)",
+            "Im_node().image = bpy.data.images['sample-mov-file.mov']",    
+            "Im_node().interpolation = 'Linear'",
+            "Im_node().projection = 'BOX'",
+            "Im_node().projection_blend = 1",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'MOVIE'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'sRGB'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Linear",
+            "Projection: Box",
+            "Extension: Repeat",
+            "Source: Single Image",
+            "Color Space: sRGB",
+            "Blend - 1"
+        ],
+        "scene": "BoxMapping.blend"
+    },
+    {
+        "case": "BL28_MAT_IMAGE_044",
+        "status": "active",
+        "functions": [
+            "Im_node().image = bpy.data.images['uv_grid_1024.png']",
+            "Im_node().interpolation = 'Smart'",
+            "Im_node().projection = 'FLAT'",
+            "Im_node().extension = 'REPEAT'",
+            "bpy.data.images['uv_grid_1024.png'].source = 'GENERATED'",
+            "bpy.data.images['uv_grid_1024.png'].colorspace_settings.name = 'Raw'",
+            "rpr_render(case)"
+        ],
+        "script_info": [
+            "Interpolation: Smart",
+            "Projection: Flat",
+            "Extension: Repeat",
+            "Source: Generated",
+            "Color Space: RAW"
+        ],
+        "scene": "BoxMapping.blend"
+    }
+]
