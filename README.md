@@ -1,4 +1,4 @@
-# Autotests for Radeon ProRender plugin for Blender
+# Autotests for USD plugin for Blender
 
 ## Install
  1. Clone this repo

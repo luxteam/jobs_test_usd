@@ -6,8 +6,7 @@
 			"usd_render(case)"
 		],
 		"script_info": [
-			"Render empty scene",
-			"Pass Limit: 50"
+			"Test USD case"
 		],
 		"scene": "usd_smoke.blend"
 	}

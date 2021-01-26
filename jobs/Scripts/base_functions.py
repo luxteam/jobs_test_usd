@@ -116,7 +116,6 @@ def set_value(path, name, value):
 def usd_render(case):
     logging('Render image')
     event('Prerender', False, case['case'])
-
     event('Postrender', True, case['case'])
     start_time = datetime.datetime.now()
     bpy.ops.render.render(write_still=True)
@@ -157,8 +156,7 @@ def prerender(case):
     set_value(scene.render.image_settings, 'color_mode', 'RGB')
 
     # output settings
-    set_value(scene.render, 'filepath', os.path.join(
-        WORK_DIR, 'Color', case['case']))
+    set_value(scene.render, 'filepath', os.path.join(WORK_DIR, 'Color', case['case']))
     set_value(scene.render, 'use_placeholder', True)
     set_value(scene.render, 'use_file_extension', True)
     set_value(scene.render, 'use_overwrite', True)

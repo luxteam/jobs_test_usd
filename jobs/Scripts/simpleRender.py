@@ -86,37 +86,6 @@ def get_finished_cases_number(output):
     return -1
 
 
-def athena_disable(disable, tool):
-    tool_version = None
-    for part in os.path.normpath(tool).split(os.sep):
-        if re.match(".*[\d.]+.*", part):
-            tool_version = re.search("[\d.]+", part).group(0)
-            break
-    if not tool_version:
-        main_logger.error("Can't get tool version!")
-    if (platform.system() == 'Windows'):
-        CONFIG_PATH = os.path.expandvars(
-            '%appdata%/Blender Foundation/Blender/{}/scripts/addons/rprblender/config.py'.format(tool_version))
-        ATHENA_DIR = os.path.expandvars('%appdata%/../Local/Temp/rprblender/')
-    elif (platform.system() == 'Darwin'):
-        CONFIG_PATH = os.path.expanduser(
-            '~/Library/Application Support/Blender/{}/scripts/addons/rprblender/config.py'.format(tool_version))
-        ATHENA_DIR = os.environ['TMPDIR'] + 'rprblender/'
-    else:
-        CONFIG_PATH = os.path.expanduser(
-            '~/.config/blender/{}/scripts/addons/rprblender/config.py'.format(tool_version))
-        ATHENA_DIR = '/tmp/rprblender/'
-
-    config_file_new = ''
-
-    with open(CONFIG_PATH, 'r') as config_file:
-        config_file_new = config_file.read().replace('disable_athena_report = ' + str(not disable), 'disable_athena_report = ' + str(disable))
-    with open(CONFIG_PATH, 'w') as config_file:
-        config_file.write(config_file_new)
-
-    return ATHENA_DIR
-
-
 def main(args):
     perf_count.event_record(args.output, 'Prepare tests', True)
 
@@ -142,8 +111,7 @@ def main(args):
         with open(os.path.join(os.path.dirname(__file__), 'extensions', args.testType + '.py')) as f:
             extension_script = f.read()
         script = script.split('# place for extension functions')
-        ATHENA_DIR = ""
-        script = script[0] + "ATHENA_DIR=\"{}\"\n".format(ATHENA_DIR.replace('\\', '\\\\')) + extension_script + script[1]
+        script = script[0] + extension_script + script[1]
 
     work_dir = os.path.abspath(args.output)
     script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
@@ -321,8 +289,6 @@ def main(args):
     stop_threads = True
 
     perf_count.event_record(args.output, 'Close tool', False)
-
-    # TODO: check athena work in blender
 
     return rc
 
