@@ -35,15 +35,12 @@ def createArgsParser():
     parser = argparse.ArgumentParser()
 
     parser.add_argument('--tool', required=True, metavar="<path>")
-    parser.add_argument('--render_device', required=True)
     parser.add_argument('--output', required=True, metavar="<dir>")
     parser.add_argument('--testType', required=True)
     parser.add_argument('--res_path', required=True)
     parser.add_argument('--resolution_x', required=True)
     parser.add_argument('--resolution_y', required=True)
-    parser.add_argument('--pass_limit', required=True)
     parser.add_argument('--testCases', required=True)
-    parser.add_argument('--SPU', required=False, default=25)
     parser.add_argument('--engine', required=False, default='FULL')
     parser.add_argument('--error_count', required=False, default=0, type=int)
     parser.add_argument('--retries', required=False, default=2, type=int)
@@ -112,8 +109,8 @@ def main(args):
         script = script[0] + extension_script + script[1]
 
     work_dir = os.path.abspath(args.output)
-    script = script.format(work_dir=work_dir, testType=args.testType, render_device=args.render_device, res_path=args.res_path, pass_limit=args.pass_limit,
-                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, SPU=args.SPU, engine=args.engine,
+    script = script.format(work_dir=work_dir, testType=args.testType, res_path=args.res_path,
+                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, engine=args.engine,
                            retries=args.retries)
 
     with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
