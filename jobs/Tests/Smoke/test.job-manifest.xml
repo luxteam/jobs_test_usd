@@ -5,22 +5,18 @@
 
     <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="1500">
         <argument>--tool "{Tool}"</argument>
-        <argument>--render_device "{RenderDevice}"</argument>
+        <argument>--render_device "{RenderDevice}"</argument> <!-- убрать -->
         <argument>--output "{OutputDir}"</argument>
         <argument>--testType Smoke</argument>
-        <argument>--pass_limit {PassLimit}</argument>
+        <argument>--pass_limit {PassLimit}</argument> <!-- убрать -->
         <argument>--resolution_x {rx}</argument>
         <argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"/Smoke</argument>
         <argument>--testCases "{TestCases}"</argument>
-        <argument>--SPU {SPU}</argument>
-        <argument>--engine "{engine}"</argument>
+        <argument>--SPU {SPU}</argument> <!-- убрать -->
+        <argument>--engine "{engine}"</argument> <!-- переделать -->
         <argument>--retries {retries}</argument>
         <argument>--update_refs "{UpdateRefs}"</argument>
-    </execute>
-
-    <execute command='python "{ResourcesDir}/syncTime.py"'>
-        <argument>--work_dir "{OutputDir}"</argument>
     </execute>
 
     <execute command='python "{CommonDir}/scripts/makeReport.py"'>
