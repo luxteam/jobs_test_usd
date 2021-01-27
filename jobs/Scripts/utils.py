@@ -1,4 +1,4 @@
-def is_case_skipped(case, render_platform, engine):
+def is_case_skipped(case, render_platform, delegate):
     if case['status'] == 'skipped':
         return True
 
@@ -8,7 +8,7 @@ def is_case_skipped(case, render_platform, engine):
             if render_platform.intersection(skip_config) == skip_config:
                 return True
 
-    if sum([1 for eng in case.get('skip_engine', []) if eng == engine]):
+    if sum([1 for eng in case.get('skip_engine', []) if eng == delegate]):
         return True
 
     return False

@@ -41,7 +41,7 @@ def createArgsParser():
     parser.add_argument('--resolution_x', required=True)
     parser.add_argument('--resolution_y', required=True)
     parser.add_argument('--testCases', required=True)
-    parser.add_argument('--engine', required=False, default='FULL')
+    parser.add_argument('--delegate', required=False, default='FULL')
     parser.add_argument('--error_count', required=False, default=0, type=int)
     parser.add_argument('--retries', required=False, default=2, type=int)
     parser.add_argument('--update_refs', required=True)
@@ -110,7 +110,7 @@ def main(args):
 
     work_dir = os.path.abspath(args.output)
     script = script.format(work_dir=work_dir, testType=args.testType, res_path=args.res_path,
-                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, engine=args.engine,
+                           resolution_x=args.resolution_x, resolution_y=args.resolution_y, delegate=args.delegate,
                            retries=args.retries)
 
     with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
@@ -138,14 +138,10 @@ def main(args):
     system_pl = platform.system()
 
     baseline_dir = 'rpr_blender_autotests_baselines'
-    if args.engine == 'FULL2':
-        baseline_dir = baseline_dir + '-NorthStar'
-    elif args.engine == 'LOW':
-        baseline_dir = baseline_dir + '-HybridLow'
-    elif args.engine == 'MEDIUM':
-        baseline_dir = baseline_dir + '-HybridMedium'
-    elif args.engine == 'HIGH':
-        baseline_dir = baseline_dir + '-HybridHigh'
+    if args.delegate == 'HdRprPlugin':
+        baseline_dir = baseline_dir + '-RPR'
+    elif args.delegate == 'HdStormRendererPlugin':
+        baseline_dir = baseline_dir + '-GL'
 
     if system_pl == "Windows":
         baseline_path_tr = os.path.join(
@@ -162,7 +158,7 @@ def main(args):
         os.makedirs(os.path.join(baseline_path, 'Color'))
 
     for case in cases:
-        if is_case_skipped(case, render_platform, args.engine):
+        if is_case_skipped(case, render_platform, args.delegate):
             case['status'] = 'skipped'
 
         if case['status'] != 'done' and case['status'] != 'error':

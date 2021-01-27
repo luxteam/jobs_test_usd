@@ -3,10 +3,10 @@ FILE_FILTER=$1
 TESTS_FILTER="$2"
 RX=${3:-0}
 RY=${4:-0}
-ENGINE=${5:-FULL}
+DELEGATE=${5:-FULL}
 TOOL=${6:-2.91}
 RETRIES=${7:-2}
 UPDATE_REFS=${8:-No}
 python -m pip install --user -r ../jobs_launcher/install/requirements.txt
 
-python ../jobs_launcher/executeTests.py --test_filter $TESTS_FILTER --file_filter $FILE_FILTER --tests_root ../jobs --work_root ../Work/Results --work_dir Blender28 --cmd_variables Tool "blender$TOOL" ResPath "$CIS_TOOLS/../TestResources/Blender2.8Assets" rx $RX ry $RY engine $ENGINE retries $RETRIES UpdateRefs $UPDATE_REFS
+python ../jobs_launcher/executeTests.py --test_filter $TESTS_FILTER --file_filter $FILE_FILTER --tests_root ../jobs --work_root ../Work/Results --work_dir Blender28 --cmd_variables Tool "blender$TOOL" ResPath "$CIS_TOOLS/../TestResources/Blender2.8Assets" rx $RX ry $RY delegate $DELEGATE retries $RETRIES UpdateRefs $UPDATE_REFS

@@ -15,7 +15,7 @@ TEST_TYPE = '{testType}'
 RES_PATH = r'{res_path}'
 RESOLUTION_X = {resolution_x}
 RESOLUTION_Y = {resolution_y}
-ENGINE = r'{engine}'
+DELEGATE = r'{delegate}'
 RETRIES = {retries}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
 
@@ -145,6 +145,8 @@ def prerender(case):
         set_value(scene.render, 'resolution_y', RESOLUTION_Y)
 
     set_value(scene.render.image_settings, 'file_format', 'JPEG')
+
+    bpy.data.scenes["Scene"].hdusd.final.delegate = DELEGATE
 
     # image settings
     set_value(scene.render.image_settings, 'quality', 100)

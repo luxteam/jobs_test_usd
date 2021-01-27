@@ -11,7 +11,7 @@
         <argument>--resolution_y {ry}</argument>
         <argument>--res_path "{ScenesDir}"/Smoke</argument>
         <argument>--testCases "{TestCases}"</argument>
-        <argument>--engine "{engine}"</argument> <!-- переделать -->
+        <argument>--delegate "{delegate}"</argument>
         <argument>--retries {retries}</argument>
         <argument>--update_refs "{UpdateRefs}"</argument>
     </execute>
