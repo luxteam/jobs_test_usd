@@ -33,7 +33,8 @@ def logging(message):
 
 
 def reportToJSON(case, render_time=0):
-    path_to_file = path.join(WORK_DIR, case['case'] + '_USD.json')
+    # TODO replace suffix by value from config
+    path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
 
     with open(path_to_file, 'r') as file:
         report = json.loads(file.read())[0]
@@ -244,7 +245,8 @@ def main():
 
             logging('In progress: ' + case['case'])
 
-            path_to_file = path.join(WORK_DIR, case['case'] + '_USD.json')
+            # TODO replace suffix by value from config
+            path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
             with open(path_to_file, 'r') as file:
                 report = json.loads(file.read())[0]
 

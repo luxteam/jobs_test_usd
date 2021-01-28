@@ -1,4 +1,4 @@
-tool_name = 'blender'
+tool_name = 'blender_usd'
 report_type = 'default'
 show_skipped_groups = True
 tracked_metrics = {}
