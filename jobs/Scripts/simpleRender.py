@@ -137,7 +137,7 @@ def main(args):
     render_platform = {platform.system(), gpu}
     system_pl = platform.system()
 
-    baseline_dir = 'rpr_blender_autotests_baselines'
+    baseline_dir = 'rpr_blenderusdhydra_autotests_baselines'
     if args.delegate == 'HdRprPlugin':
         baseline_dir = baseline_dir + '-RPR'
     elif args.delegate == 'HdStormRendererPlugin':
