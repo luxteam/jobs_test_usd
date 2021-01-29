@@ -1,4 +1,4 @@
-tool_name = 'blender_usd'
+tool_name = 'blender_usd_hydra'
 report_type = 'default'
 show_skipped_groups = True
 tracked_metrics = {}
