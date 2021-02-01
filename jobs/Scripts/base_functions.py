@@ -204,7 +204,7 @@ def case_function(case):
     if case['functions'][0] == 'check_test_cases_success_save':
         func = 'save_report'
 
-    if case['status'] == 'fail' or case.get('number_of_tries', 1) == RETRIES:
+    if case['status'] == 'fail' or case.get('number_of_tries', 0) == RETRIES:
         case['status'] = 'error'
         func = 'save_report'
     elif case['status'] == 'skipped':
