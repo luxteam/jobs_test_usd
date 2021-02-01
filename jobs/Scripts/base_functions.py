@@ -18,6 +18,7 @@ RESOLUTION_Y = {resolution_y}
 DELEGATE = r'{delegate}'
 RETRIES = {retries}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
+CASE_SUFFIX = r'{case_suffix}'
 
 
 def event(name, start, case):
@@ -34,7 +35,7 @@ def logging(message):
 
 def reportToJSON(case, render_time=0):
     # TODO replace suffix by value from config
-    path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+    path_to_file = path.join(WORK_DIR, case['case'] + CASE_SUFFIX)
 
     with open(path_to_file, 'r') as file:
         report = json.loads(file.read())[0]
@@ -246,7 +247,7 @@ def main():
             logging('In progress: ' + case['case'])
 
             # TODO replace suffix by value from config
-            path_to_file = path.join(WORK_DIR, case['case'] + '_RPR.json')
+            path_to_file = path.join(WORK_DIR, case['case'] + CASE_SUFFIX)
             with open(path_to_file, 'r') as file:
                 report = json.loads(file.read())[0]
 
