@@ -114,7 +114,6 @@ def set_value(path, name, value):
 def usd_render(case):
     logging('Render image')
     event('Prerender', False, case['case'])
-    event('Postrender', True, case['case'])
     start_time = datetime.datetime.now()
     bpy.ops.render.render(write_still=True)
     render_time = (datetime.datetime.now() - start_time).total_seconds()

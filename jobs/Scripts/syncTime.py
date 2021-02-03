@@ -57,7 +57,6 @@ def sync_time(directory):
 
             with open(case_report_path, 'w') as case_report:
                 case_report.write(json.dumps(case_json, indent=4))
-    perf_count.event_record(directory, 'Sync time count', False)
 
     files = os.listdir(directory)
     json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
@@ -71,6 +70,7 @@ def sync_time(directory):
             json.dump(json_report, file, indent=' ')
 
     cpu_name = cpuinfo.get_cpu_info()['brand']
+    perf_count.event_record(directory, 'Sync time count', False)
 
 
 if __name__ == "__main__":
