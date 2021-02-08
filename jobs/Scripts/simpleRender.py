@@ -111,7 +111,7 @@ def main(args):
     work_dir = os.path.abspath(args.output)
     script = script.format(work_dir=work_dir, testType=args.testType, res_path=args.res_path,
                            resolution_x=args.resolution_x, resolution_y=args.resolution_y, delegate=args.delegate,
-                           retries=args.retries)
+                           retries=args.retries, case_suffix=core_config.CASE_REPORT_SUFFIX)
 
     with open(os.path.join(args.output, 'base_functions.py'), 'w') as file:
         file.write(script)
@@ -137,7 +137,7 @@ def main(args):
     render_platform = {platform.system(), gpu}
     system_pl = platform.system()
 
-    baseline_dir = 'rpr_blender_autotests_baselines'
+    baseline_dir = 'rpr_blenderusdhydra_autotests_baselines'
     if args.delegate == 'HdRprPlugin':
         baseline_dir = baseline_dir + '-RPR'
     elif args.delegate == 'HdStormRendererPlugin':

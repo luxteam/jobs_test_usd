@@ -16,6 +16,10 @@
         <argument>--update_refs "{UpdateRefs}"</argument>
     </execute>
 
+    <execute command='python "{ResourcesDir}/syncTime.py"'>
+        <argument>--work_dir "{OutputDir}"</argument>
+    </execute>
+
     <execute command='python "{CommonDir}/scripts/makeReport.py"'>
         <argument>--work_dir "{OutputDir}"</argument>
     </execute>

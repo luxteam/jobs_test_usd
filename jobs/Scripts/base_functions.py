@@ -18,6 +18,7 @@ RESOLUTION_Y = {resolution_y}
 DELEGATE = r'{delegate}'
 RETRIES = {retries}
 LOGS_DIR = path.join(WORK_DIR, 'render_tool_logs')
+CASE_SUFFIX = r'{case_suffix}'
 
 
 def event(name, start, case):
@@ -33,7 +34,8 @@ def logging(message):
 
 
 def reportToJSON(case, render_time=0):
-    path_to_file = path.join(WORK_DIR, case['case'] + '_USD.json')
+    # TODO replace suffix by value from config
+    path_to_file = path.join(WORK_DIR, case['case'] + CASE_SUFFIX)
 
     with open(path_to_file, 'r') as file:
         report = json.loads(file.read())[0]
@@ -112,7 +114,6 @@ def set_value(path, name, value):
 def usd_render(case):
     logging('Render image')
     event('Prerender', False, case['case'])
-    event('Postrender', True, case['case'])
     start_time = datetime.datetime.now()
     bpy.ops.render.render(write_still=True)
     render_time = (datetime.datetime.now() - start_time).total_seconds()
@@ -202,7 +203,7 @@ def case_function(case):
     if case['functions'][0] == 'check_test_cases_success_save':
         func = 'save_report'
 
-    if case['status'] == 'fail' or case.get('number_of_tries', 1) == RETRIES:
+    if case['status'] == 'fail' or case.get('number_of_tries', 0) == RETRIES:
         case['status'] = 'error'
         func = 'save_report'
     elif case['status'] == 'skipped':
@@ -244,7 +245,8 @@ def main():
 
             logging('In progress: ' + case['case'])
 
-            path_to_file = path.join(WORK_DIR, case['case'] + '_USD.json')
+            # TODO replace suffix by value from config
+            path_to_file = path.join(WORK_DIR, case['case'] + CASE_SUFFIX)
             with open(path_to_file, 'r') as file:
                 report = json.loads(file.read())[0]
 
