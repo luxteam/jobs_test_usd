@@ -8,4 +8,4 @@ echo bpy.data.scenes["Scene"].hdusd.final.delegate = "HdRprPlugin"
 echo bpy.context.scene.render.filepath = os.path.join(os.getcwd(), '..', 'Work', 'Results', 'BlenderUSDHydra', 'cache_building') >> cache_build.py
 echo bpy.ops.render.render(write_still=True) >> cache_build.py
 
-"C:\\Program Files\\Blender Foundation\\Blender %TOOL_VERSION%\\blender.exe" -b -P "cache_build.py"
+"C:\\Program Files\\Blender Foundation\\Blender %TOOL_VERSION%\\blender.exe" -b -E HdUSD -P "cache_build.py"
