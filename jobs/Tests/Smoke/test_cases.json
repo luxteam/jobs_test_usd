@@ -1,13 +1,125 @@
 [
 	{
-		"case": "BL28_SM_004",
+		"case": "USD_SM_001",
 		"status": "active",
 		"functions": [
 			"usd_render(case)"
 		],
 		"script_info": [
-			"Test USD case"
+			"Default"
 		],
-		"scene": "usd_smoke.blend"
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_002",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Default MaterialX"
+		],
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_003",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"bpy.ops.hdusd.use_nodetree_add_basic_nodes(scene_source='USD_FILE')",
+			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
+			"bpy.data.node_groups['NodeTree'].nodes['Read USD File'].filename = os.path.join(RES_PATH, 'USD_Files', 'HumanFemale.usd')",
+			"usd_render(case)",
+			"bpy.ops.hdusd.data_source(data_source='')"
+		],
+		"script_info": [
+			"'USD file' default tree"
+		],
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_004",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"bpy.ops.hdusd.use_nodetree_add_basic_nodes(scene_source='SCENE')",
+			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
+			"usd_render(case)",
+			"bpy.ops.hdusd.data_source(data_source='')"
+		],
+		"script_info": [
+			"'Current scene' default tree"
+		],
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_005",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Multiple lights"
+		],
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_006",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"bpy.data.lights['Light'].type = 'SUN'",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sun Light"
+		],
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_007",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"bpy.data.lights['Light'].type = 'SPOT'",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Spot Light"
+		],
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_008",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"bpy.data.lights['Light'].type = 'AREA'",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Area Light"
+		],
+		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_009",
+		"status": "active",
+		"functions": [
+			"bpy.data.materials['Material'].hdusd.mx_node_tree = bpy.data.node_groups['MX_Material']",
+			"bpy.data.scenes['Scene'].render.resolution_x = 3840",
+			"bpy.data.scenes['Scene'].render.resolution_y = 2160",
+			"bpy.data.scenes['Scene'].render.resolution_percantage = 100",
+			"usd_render(case)",
+			"bpy.data.scenes['Scene'].render.resolution_x = 1920",
+			"bpy.data.scenes['Scene'].render.resolution_y = 1080",
+			"bpy.data.scenes['Scene'].render.resolution_percantage = 50"
+		],
+		"script_info": [
+			"4k resolution"
+		],
+		"scene": "USD_Smoke.blend"
 	}
 ]
