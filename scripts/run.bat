@@ -17,4 +17,4 @@ if not defined UPDATE_REFS set UPDATE_REFS="No"
 
 python -m pip install -r ../jobs_launcher/install/requirements.txt
 
-python ..\jobs_launcher\executeTests.py --test_filter %TESTS_FILTER% --file_filter %FILE_FILTER% --tests_root ..\jobs --work_root ..\Work\Results --work_dir BlenderUSDHydra --cmd_variables Tool "C:\Program Files\Blender Foundation\Blender %TOOL%\blender.exe" ResPath "C:\TestResources\BlenderUSDHydraAssets" rx %RX% ry %RY% delegate %DELEGATE% retries %RETRIES% UpdateRefs %UPDATE_REFS%
+python ..\jobs_launcher\executeTests.py --test_filter %TESTS_FILTER% --file_filter %FILE_FILTER% --tests_root ..\jobs --work_root ..\Work\Results --work_dir BlenderUSDHydra --cmd_variables Tool "C:\Program Files\Blender Foundation\Blender %TOOL%\blender.exe" ResPath "C:\TestResources\usd_blender_autotests_assets" rx %RX% ry %RY% delegate %DELEGATE% retries %RETRIES% UpdateRefs %UPDATE_REFS%
