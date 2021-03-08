@@ -60,7 +60,7 @@ def sync_time(directory):
 
     files = os.listdir(directory)
     json_files = list(filter(lambda x: x.endswith('RPR.json'), files))
-    cpu_name = cpuinfo.get_cpu_info()['brand']
+    cpu_name = cpuinfo.get_cpu_info()['brand_raw']
     for f in range(len(json_files)):
         with open(os.path.join(directory, json_files[f]), 'r') as w:
             json_report = w.read()
@@ -69,7 +69,7 @@ def sync_time(directory):
         with open(os.path.join(directory, json_files[f]), 'w') as file:
             json.dump(json_report, file, indent=' ')
 
-    cpu_name = cpuinfo.get_cpu_info()['brand']
+    cpu_name = cpuinfo.get_cpu_info()['brand_raw']
     perf_count.event_record(directory, 'Sync time count', False)
 
 
