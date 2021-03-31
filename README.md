@@ -5,7 +5,7 @@
  2. Get `jobs_launcher` as git submodule, using next commands
  `git submodule init`
  `git submodule update`
- 3. Check that `BlenderAssets` scenes placed in `C:/TestResources`
+ 3. Check that `usd_blender_autotests` scenes placed in `C:/TestResources`
  4. Run `scripts/run.bat` with customised `--cmd_variables`. For example:
 
      > --cmd_variables Tool "C:\Program Files\Blender Foundation\Blender\blender.exe" RenderDevice 'gpu' TestsFilter small
