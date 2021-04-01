@@ -1,6 +1,7 @@
 set TOOL_VERSION=%1
 if not defined TOOL_VERSION set TOOL_VERSION=2.91
 
+del cache_build.py
 echo import os >> cache_build.py
 echo import bpy >> cache_build.py
 echo bpy.context.scene.render.image_settings.file_format = 'JPEG' >> cache_build.py

@@ -1,6 +1,6 @@
 {
     "split":false,
     "groups":{
-        "Smoke":"USD_SM_001,USD_SM_002,USD_SM_003,USD_SM_004,USD_SM_005,USD_SM_006,USD_SM_007,USD_SM_008,USD_SM_009"
+        "Smoke":"USD_SM_001"
     }
 }
