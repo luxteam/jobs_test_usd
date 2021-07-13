@@ -1,0 +1,33 @@
+[
+	{
+		"case": "USD_BL_MTX_001",
+		"status": "active",
+		"functions": [
+			"rpr_uber = bpy.data.node_groups['MX_Uber'].nodes['RPR Uber']",
+			"image = bpy.data.node_groups['MX_Uber'].nodes.new('hdusd.MxNode_STD_image')",
+			"image.prop.p_file = os.path.join(RES_PATH, 'Maps', 'diffuseColor.png')",
+			"bpy.data.node_groups['MX_Uber'].links.new(rpr_uber.inputs['uber_diffuse_color'], image.outputs['out'])",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"1. Diffuse",
+			"Diffuse color.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_002",
+		"status": "active",
+		"functions": [
+			"rpr_uber = bpy.data.node_groups['MX_Uber'].nodes['RPR Uber']",
+			"image = bpy.data.node_groups['MX_Uber'].nodes.new('hdusd.MxNode_STD_image')",
+			"image.prop.p_file = os.path.join(RES_PATH, 'Maps', 'diffuseColor.tga')",
+			"bpy.data.node_groups['MX_Uber'].links.new(rpr_uber.inputs['uber_diffuse_color'], image.outputs['out'])",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Diffuse color.tga"
+		],
+		"scene": "MaterialX.blend"
+	}
+]
