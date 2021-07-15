@@ -278,7 +278,7 @@
 			"rpr_uber.f_reflection = True",
 			"nd_surfaceshader['in_uber_reflection_roughness'] = 0.5",
 			"nd_surfaceshader['in_uber_reflection_anisotropy'] = 1",
-			"nd_surfaceshader['in_uber_reflection_anisotropy_rotation'] = 90",
+			"nd_surfaceshader['in_uber_reflection_anisotropy_rotation'] = 0.25",
 			"usd_render(case)"
 		],
 		"script_info": [
