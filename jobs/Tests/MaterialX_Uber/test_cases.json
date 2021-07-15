@@ -3,14 +3,12 @@
 		"case": "USD_BL_MTX_001",
 		"status": "active",
 		"functions": [
-			"rpr_uber = bpy.data.node_groups['MX_Uber'].nodes['RPR Uber']",
-			"image = bpy.data.node_groups['MX_Uber'].nodes.new('hdusd.MxNode_STD_image')",
-			"image.prop.p_file = os.path.join(RES_PATH, 'Maps', 'diffuseColor.png')",
-			"bpy.data.node_groups['MX_Uber'].links.new(rpr_uber.inputs['uber_diffuse_color'], image.outputs['out'])",
-			"usd_render(case)"
+			"default_settings()",
+			"create_texture2d_image('diffuseColor.png', 'RPR Uber', 'uber_diffuse_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
 		],
 		"script_info": [
-			"1. Diffuse",
 			"Diffuse color.png"
 		],
 		"scene": "MaterialX.blend"
@@ -19,14 +17,1689 @@
 		"case": "USD_BL_MTX_002",
 		"status": "active",
 		"functions": [
-			"rpr_uber = bpy.data.node_groups['MX_Uber'].nodes['RPR Uber']",
-			"image = bpy.data.node_groups['MX_Uber'].nodes.new('hdusd.MxNode_STD_image')",
-			"image.prop.p_file = os.path.join(RES_PATH, 'Maps', 'diffuseColor.tga')",
-			"bpy.data.node_groups['MX_Uber'].links.new(rpr_uber.inputs['uber_diffuse_color'], image.outputs['out'])",
-			"usd_render(case)"
+			"default_settings()",
+			"create_texture2d_image('diffuseColor.tga', 'RPR Uber', 'uber_diffuse_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
 		],
 		"script_info": [
 			"Diffuse color.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_003",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_uber_diffuse_weight'] = 0.0",
+			"nd_surfaceshader['in_uber_diffuse_roughness'] = 0.0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Diffuse Color", 
+			"RGB color: 0:0.4:0",
+			"Weight - 0",
+			"Roughness - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_004",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_uber_diffuse_weight'] = 0.5",
+			"nd_surfaceshader['in_uber_diffuse_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Diffuse Color", 
+			"RGB color: 0:0.4:0",
+			"Weight - 0.5",
+			"Roughness - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_005",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_uber_diffuse_weight'] = 1.0",
+			"nd_surfaceshader['in_uber_diffuse_roughness'] = 1.0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Diffuse Color", 
+			"RGB color: 0:0.4:0",
+			"Weight - 1.0",
+			"Roughness - 1.0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_006",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"create_texture2d_image('diffuseWeight.png', 'RPR Uber', 'uber_diffuse_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Diffuse Weight.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_007",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"create_texture2d_image('diffuseWeight.tga', 'RPR Uber', 'uber_diffuse_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Diffuse Weight.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_008",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+    		"rpr_uber.f_reflection = True",
+			"create_texture2d_image('reflectionColor.png', 'RPR Uber', 'uber_reflection_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionColor.png",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_009",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+    		"rpr_uber.f_reflection = True",
+			"create_texture2d_image('reflectionColor.tga', 'RPR Uber', 'uber_reflection_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionColor.tga",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_010",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+    		"rpr_uber.f_reflection = True",
+			"create_texture2d_image('reflectionWeight.png', 'RPR Uber', 'uber_reflection_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionWeight.png",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_011",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+    		"rpr_uber.f_reflection = True",
+			"create_texture2d_image('reflectionWeight.tga', 'RPR Uber', 'uber_reflection_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionWeight.tga",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_012",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+    		"rpr_uber.f_reflection = True",
+			"create_texture2d_image('roughness.png', 'RPR Uber', 'uber_reflection_roughness')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"roughness.png",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_013",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+    		"rpr_uber.f_reflection = True",
+			"create_texture2d_image('roughness.tga', 'RPR Uber', 'uber_reflection_roughness')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"roughness.tga",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_014",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_weight'] = 0.0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Weight - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_015",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 0.5",
+			"nd_surfaceshader['in_uber_reflection_anisotropy'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Anisotropy - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_016",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 0.5",
+			"nd_surfaceshader['in_uber_reflection_anisotropy'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Anisotropy - 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_017",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 0.5",
+			"nd_surfaceshader['in_uber_reflection_anisotropy'] = 1",
+			"nd_surfaceshader['in_uber_reflection_anisotropy_rotation'] = 90",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Anisotropy - 1",
+			"Anisotropy Rotation - 90"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_018",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Roughness - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_019",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Roughness - 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_020",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_ior'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"IOR - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_021",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_ior'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"IOR - 3"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_022",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_fresnel_schlick_approximation'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Fresnel Schlick Approximation - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_023",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_fresnel_schlick_approximation'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Fresnel Schlick Approximation - 3"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_024",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"create_texture2d_image('reflectionColor.png', 'RPR Uber', 'uber_reflection_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionColor.png",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_025",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"create_texture2d_image('reflectionColor.tga', 'RPR Uber', 'uber_reflection_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionColor.tga",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_026",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"create_texture2d_image('reflectionWeight.png', 'RPR Uber', 'uber_reflection_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionWeight.png",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_027",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"create_texture2d_image('reflectionWeight.tga', 'RPR Uber', 'uber_reflection_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"reflectionWeight.tga",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_028",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"nd_surfaceshader['in_uber_reflection_metalness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Metalness - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_029",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_reflection = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"nd_surfaceshader['in_uber_reflection_metalness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Metalness - 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_030",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"rpr_uber.f_refraction = True",
+			"create_texture2d_image('refractionColor.png', 'RPR Uber', 'uber_refraction_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionColor.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_031",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"rpr_uber.f_refraction = True",
+			"create_texture2d_image('refractionColor.tga', 'RPR Uber', 'uber_refraction_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionColor.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_032",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"rpr_uber.f_refraction = True",
+			"create_texture2d_image('refractionWeight.png', 'RPR Uber', 'uber_refraction_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionWeight.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_033",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"rpr_uber.f_refraction = True",
+			"create_texture2d_image('refractionWeight.tga', 'RPR Uber', 'uber_refraction_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionWeight.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_034",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_refraction = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 2",
+			"nd_surfaceshader['in_uber_refraction_thin_surface'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Refraction",
+			"Thin surface"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_035",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_refraction = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 2",
+			"nd_surfaceshader['in_uber_refraction_weight'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Refraction",
+			"Weight - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_036",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_refraction = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 2",
+			"nd_surfaceshader['in_uber_refraction_weight'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Refraction",
+			"Weight - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_037",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_refraction = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 2",
+			"nd_surfaceshader['in_uber_refraction_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Refraction",
+			"Roughness - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_038",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_refraction = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 2",
+			"nd_surfaceshader['in_uber_refraction_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Refraction",
+			"Roughness - 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_039",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_refraction = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 2",
+			"nd_surfaceshader['in_uber_refraction_absorption_color'] = (0.0, 1.0, 0.0)",
+			"nd_surfaceshader['in_uber_refraction_absorption_distance'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Absorption Distance - 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_040",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_refraction = True",
+			"nd_surfaceshader['in_uber_reflection_mode'] = 2",
+			"nd_surfaceshader['in_uber_refraction_absorption_color'] = (0.0, 1.0, 0.0)",
+			"nd_surfaceshader['in_uber_refraction_absorption_distance'] = 5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Absorption Distance - 5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_041",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"create_texture2d_image('coatColor.png', 'RPR Uber', 'uber_coating_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"coatColor.png",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_042",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"create_texture2d_image('coatColor.tga', 'RPR Uber', 'uber_coating_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"coatColor.tga",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_043",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Default",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_044",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_weight'] = 0.0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Weight - 0",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_045",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_weight'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Weight - 0.5",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_046",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Roughness - 0.5",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_047",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Roughness - 1",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_048",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_ior'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Fresnel IOR - 0",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_049",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_ior'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Fresnel IOR - 0.5",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_050",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_thickness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Coating Thickness – 1",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_051",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_thickness'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Coating Thickness – 3",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_052",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.8, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.8:0",
+			"Coating Transmission Color",
+			"PBR"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_053",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"create_texture2d_image('coatColor.png', 'RPR Uber', 'uber_coating_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"coatColor.png",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_054",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"create_texture2d_image('coatColor.tga', 'RPR Uber', 'uber_coating_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"coatColor.tga",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_055",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Default",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_056",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_weight'] = 0.0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Weight - 0",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_057",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_weight'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Weight - 0.5",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_058",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Roughness - 0.5",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_059",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Roughness - 1",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_060",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_ior'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Fresnel IOR - 0",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_061",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_ior'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Fresnel IOR - 0.5",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_062",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_thickness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Thickness - 1",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_063",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_thickness'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.4:0",
+			"Thickness - 3",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_064",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_coating = True",
+			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.8, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"RGB color: 0:0.8:0",
+			"Coating Transmission Color",
+			"Metalness"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_065",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"rpr_uber.f_sheen = True",
+			"nd_surfaceshader['in_uber_sheen'] = (1, 1, 1)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen Color - RGB: 1,1,1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_066",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"rpr_uber.f_sheen = True",
+			"nd_surfaceshader['in_uber_sheen'] = (1, 1, 1)",
+			"nd_surfaceshader['in_uber_sheen_weight'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen Color - RGB: 1,1,1",
+			"Weight - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_067",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"rpr_uber.f_sheen = True",
+			"nd_surfaceshader['in_uber_sheen'] = (1, 1, 1)",
+			"nd_surfaceshader['in_uber_sheen_weight'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen Color - RGB: 1,1,1",
+			"Weight - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_068",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"rpr_uber.f_sheen = True",
+			"nd_surfaceshader['in_uber_sheen_tint'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen Tint - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_069",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"rpr_uber.f_sheen = True",
+			"nd_surfaceshader['in_uber_sheen_tint'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen Tint - 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_070",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_emission = True",
+			"create_texture2d_image('emissiveColor.png', 'RPR Uber', 'uber_emission_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveColor.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_071",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_emission = True",
+			"create_texture2d_image('emissiveColor.tga', 'RPR Uber', 'uber_emission_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveColor.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_072",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_emission = True",
+			"create_texture2d_image('emissiveWeight.png', 'RPR Uber', 'uber_emission_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveWeight.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_073",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"rpr_uber.f_emission = True",
+			"create_texture2d_image('emissiveWeight.tga', 'RPR Uber', 'uber_emission_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveWeight.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_074",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_emission = True",
+			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emissive",
+			"Color - RGB: 0, 0.1, 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_075",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_emission = True",
+			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
+			"nd_surfaceshader['in_uber_emission_weight'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emissive",
+			"Color - RGB: 0, 0.1, 1",
+			"Emissive Weight - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_076",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_emission = True",
+			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
+			"nd_surfaceshader['in_uber_emission_weight'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emissive",
+			"Color - RGB: 0, 0.1, 1",
+			"Emissive Weight - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_077",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_emission = True",
+			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
+			"set_value(nd_surfaceshader, 'in_uber_emission_intensity', 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emissive",
+			"Color - RGB: 0, 0.1, 1",
+			"Emissive Intensity - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_078",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_emission = True",
+			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
+			"set_value(nd_surfaceshader, 'in_uber_emission_intensity', 100)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emissive",
+			"Color - RGB: 0, 0.1, 1",
+			"Emissive Intensity - 100"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_079",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"rpr_uber.f_emission = True",
+			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
+			"set_value(nd_surfaceshader, 'in_uber_emission_intensity', 3)",
+			"nd_surfaceshader['in_uber_emission_mode'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emissive",
+			"Color - RGB: 0, 0.1, 1",
+			"Double Sided"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_080",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_transparency = True",
+			"create_texture2d_image('transparency.png', 'RPR Uber', 'uber_transparency')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"transparency.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_081",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_transparency = True",
+			"create_texture2d_image('transparency.tga', 'RPR Uber', 'uber_transparency')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"transparency.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_082",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_transparency = True",
+			"nd_surfaceshader['in_uber_transparency'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transparency - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_083",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_transparency = True",
+			"nd_surfaceshader['in_uber_transparency'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transparency - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_084",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"create_texture2d_image('sssColor.png', 'RPR Uber', 'uber_sss_scatter_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssColor.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_085",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"create_texture2d_image('sssColor.tga', 'RPR Uber', 'uber_sss_scatter_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssColor.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_086",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"create_texture2d_image('sssWeight.png', 'RPR Uber', 'uber_sss_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssWeight.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_087",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"create_texture2d_image('sssWeight.tga', 'RPR Uber', 'uber_sss_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssWeight.tga"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_088",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"set_value(nd_surfaceshader, 'in_uber_sss_use_diffuse_color', True)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface",
+			"Use Diffuse Color"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_089",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"nd_surfaceshader['in_uber_sss_multiscatter'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface",
+			"Multiple Scattering"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_090",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"nd_surfaceshader['in_uber_sss_scatter_color'] = (0, 0.4, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface",
+			"RGB color: 0:0.4:0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_091",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"nd_surfaceshader['in_uber_sss_weight'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface",
+			"Weight - 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_092",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"nd_surfaceshader['in_uber_sss_weight'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface",
+			"Weight - 0.5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_093",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"nd_surfaceshader['in_uber_sss_scatter_direction'] = -1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface",
+			"Scattering Direction - -1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_094",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"nd_surfaceshader['in_uber_sss_scatter_direction'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface",
+			"Scattering Direction - 1"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_095",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"set_value(nd_surfaceshader, 'in_uber_sss_radius', (0, 0, 0))",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Radius - 0, 0, 0"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_096",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"rpr_uber.f_subsurface = True",
+			"set_value(nd_surfaceshader, 'in_uber_sss_radius', (5, 5, 5))",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Radius - 5, 5, 5"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_097",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"create_rpr_normalmap('RPR Uber', 'uber_diffuse_normal')",
+			"create_texture2d_image('normal.png', 'RPR Normal Map', 'color')",
+			"usd_render(case)",
+			"delete_rpr_normalmap()",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"normal.png"
+		],
+		"scene": "MaterialX.blend"
+	},
+	{
+		"case": "USD_BL_MTX_098",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+    		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"create_rpr_normalmap('RPR Uber', 'uber_diffuse_normal')",
+			"create_texture2d_image('normal.tga', 'RPR Normal Map', 'color')",
+			"usd_render(case)",
+			"delete_rpr_normalmap()",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"normal.tga"
 		],
 		"scene": "MaterialX.blend"
 	}
