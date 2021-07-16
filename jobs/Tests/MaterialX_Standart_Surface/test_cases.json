@@ -1,0 +1,1468 @@
+[
+	{
+		"case": "USD_BL_MTX_SS_001",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"create_texture2d_image('diffuseColor.png', 'Standard surface', 'base_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Diffuse color.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_002",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"create_texture2d_image('diffuseColor.tga', 'Standard surface', 'base_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Diffuse color.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_003",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_base'] = 0",
+			"nd_surfaceshader['in_diffuse_roughness'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Base, Weight - 0",
+			"Roughness - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_004",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_base'] = 0.5",
+			"nd_surfaceshader['in_diffuse_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Base, Weight - 0.5",
+			"Roughness - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_005",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_base'] = 1",
+			"nd_surfaceshader['in_diffuse_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Base, Weight - 1",
+			"Roughness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_006",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_base'] = 0.8",
+			"nd_surfaceshader['in_diffuse_roughness'] = 0.5",
+			"nd_surfaceshader['in_metalness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Base, Weight - 0.8", 
+			"Roughness - 0.5",
+			"Metalness - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_007",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader['in_base'] = 0.5",
+			"nd_surfaceshader['in_diffuse_roughness'] = 0.5",
+			"nd_surfaceshader['in_metalness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Base, Weight - 0.5", 
+			"Roughness - 0.5",
+			"Metalness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_008",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"create_texture2d_image('diffuseWeight.png', 'Standard surface', 'base_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Diffuse Weight.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_009",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"create_texture2d_image('diffuseWeight.tga', 'Standard surface', 'base_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Diffuse Weight.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_010",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_specular = True",
+			"create_texture2d_image('reflectionColor.png', 'Standard surface', 'specular_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Specular",
+			"reflectionColor.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_011",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_specular = True",
+			"create_texture2d_image('reflectionColor.tga', 'Standard surface', 'specular_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Specular",
+			"reflectionColor.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_012",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_specular = True",
+			"create_texture2d_image('reflectionWeight.png', 'Standard surface', 'specular')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Specular",
+			"reflectionWeight.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_013",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_specular = True",
+			"create_texture2d_image('reflectionWeight.tga', 'Standard surface', 'specular')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Specular",
+			"reflectionWeight.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_014",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_specular = True",
+			"create_texture2d_image('roughness.png', 'Standard surface', 'specular_roughness')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Specular",
+			"roughness.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_015",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_specular = True",
+			"create_texture2d_image('roughness.tga', 'Standard surface', 'specular_roughness')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"Specular",
+			"roughness.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_016",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"Weight - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_017",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_roughness'] = 0.5",
+    		"nd_surfaceshader['in_specular_anisotropy'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"Anisotropy - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_018",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_roughness'] = 0.5",
+    		"nd_surfaceshader['in_specular_anisotropy'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"Anisotropy - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_019",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_roughness'] = 0.5",
+    		"nd_surfaceshader['in_specular_anisotropy'] = 1",
+			"nd_surfaceshader['in_specular_rotation'] = 0.125",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"Anisotropy - 1",
+			"Specular Rotation - 45"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_020",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_roughness'] = 0.5",
+    		"nd_surfaceshader['in_specular_anisotropy'] = 1",
+			"nd_surfaceshader['in_specular_rotation'] = 0.25",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"Anisotropy - 1",
+			"Specular Rotation - 90"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_021",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"Roughness - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_022",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"Roughness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_023",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_IOR'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"IOR - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_024",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_specular = True",
+			"nd_surfaceshader['in_specular_IOR'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Specular",
+			"IOR - 3"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_025",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_transmission = True",
+			"create_texture2d_image('refractionColor.png', 'Standard surface', 'transmission_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionColor.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_026",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_transmission = True",
+			"create_texture2d_image('refractionColor.tga', 'Standard surface', 'transmission_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionColor.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_027",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_transmission = True",
+			"create_texture2d_image('refractionWeight.png', 'Standard surface', 'transmission')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionWeight.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_028",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_transmission = True",
+			"create_texture2d_image('refractionWeight.tga', 'Standard surface', 'transmission')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"refractionWeight.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_029",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission, Weight - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_030",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission, Weight - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_031",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_depth'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Depth - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_032",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_depth'] = 10",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Depth - 10"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_033",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_depth'] = 5",
+			"nd_surfaceshader['in_transmission_scatter'] = (0.4, 0, 0.4)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Scatter RGB: 0.4;0;0.4"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_034",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_scatter_anisotropy'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Anisotropy - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_035",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_scatter_anisotropy'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Anisotropy - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_036",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_dispersion'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Dispersion - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_037",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_dispersion'] = 10",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Dispersion - 10"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_038",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_extra_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Roughness - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_039",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"ss_node.f_transmission = True",
+			"nd_surfaceshader['in_transmission_extra_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Transmission Roughness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_040",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"create_texture2d_image('sssColor.png', 'Standard surface', 'subsurface_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssColor.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_041",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"create_texture2d_image('sssColor.tga', 'Standard surface', 'subsurface_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssColor.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_042",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"create_texture2d_image('sssWeight.png', 'Standard surface', 'subsurface')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssWeight.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_043",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"create_texture2d_image('sssWeight.tga', 'Standard surface', 'subsurface')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"sssWeight.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_044",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 1",
+			"nd_surfaceshader['in_subsurface_color'] = (0, 0.4, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface, RGB color: 0:0,4:0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_045",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface, Weight - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_046",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface, Weight - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_047",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 1",
+			"nd_surfaceshader['in_subsurface_radius'] = (0, 0.6, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Radius RGB: 0; 0.6; 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_048",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 1",
+			"nd_surfaceshader['in_subsurface_radius'] = (0.6, 0, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Radius RGB: 0.6; 0; 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_049",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 1",
+			"nd_surfaceshader['in_subsurface_scale'] = 5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Scale - 5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_050",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 1",
+			"nd_surfaceshader['in_subsurface_scale'] = 10",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Scale - 10"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_051",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 1",
+			"nd_surfaceshader['in_subsurface_anisotropy'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Anisotropy - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_052",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_subsurface = True",
+			"nd_surfaceshader['in_subsurface'] = 1",
+			"nd_surfaceshader['in_subsurface_anisotropy'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Subsurface Anisotropy - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_053",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_sheen = True",
+			"nd_surfaceshader['in_sheen'] = 1",
+			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen",
+			"Color - RGB: 0,1,1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_054",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_sheen = True",
+			"nd_surfaceshader['in_sheen'] = 0",
+			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen",
+			"Weight - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_055",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_sheen = True",
+			"nd_surfaceshader['in_sheen'] = 0.5",
+			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen",
+			"Weight - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_056",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_sheen = True",
+			"nd_surfaceshader['in_sheen'] = 1",
+			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"nd_surfaceshader['in_sheen_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen",
+			"Roughness - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_057",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_sheen = True",
+			"nd_surfaceshader['in_sheen'] = 1",
+			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"nd_surfaceshader['in_sheen_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Sheen",
+			"Roughness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_058",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"create_texture2d_image('coatColor.png', 'Standard surface', 'coat_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"coatColor.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_059",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"create_texture2d_image('coatColor.tga', 'Standard surface', 'coat_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"coatColor.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_060",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Default"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_061",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 0",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Weight - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_062",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 0.5",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Weight - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_063",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Roughness - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_064",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Roughness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_065",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_anisotropy'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Anisotropy - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_066",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_anisotropy'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Anisotropy - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_067",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_anisotropy'] = 0.5",
+			"nd_surfaceshader['in_coat_rotation'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Rotation - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_068",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_anisotropy'] = 0.5",
+			"nd_surfaceshader['in_coat_rotation'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Rotation - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_069",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_IOR'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"IOR - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_070",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_IOR'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"IOR - 3"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_071",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_affect_color'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Affect Color - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_072",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_affect_color'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Affect Color - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_073",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_affect_color'] = 0.5",
+			"nd_surfaceshader['in_coat_affect_roughness'] = 0.5",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Affect Roughness - 0.5"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_074",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"ss_node.f_coat = True",
+			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader['in_coat_affect_color'] = 0.5",
+			"nd_surfaceshader['in_coat_affect_roughness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Coat",
+			"Affect Roughness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_075",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_thin_film = True",
+			"nd_surfaceshader['in_thin_film_thickness'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Thin Film",
+			"Thickness - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_076",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_thin_film = True",
+			"nd_surfaceshader['in_thin_film_thickness'] = 10",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Thin Film",
+			"Thickness - 10"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_077",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_thin_film = True",
+			"nd_surfaceshader['in_thin_film_thickness'] = 50",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Thin Film",
+			"Thickness - 50"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_078",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_thin_film = True",
+			"nd_surfaceshader['in_thin_film_thickness'] = 1",
+			"nd_surfaceshader['in_thin_film_IOR'] = 1",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Thin Film",
+			"IOR - 1"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_079",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_thin_film = True",
+			"nd_surfaceshader['in_thin_film_thickness'] = 1",
+			"nd_surfaceshader['in_thin_film_IOR'] = 3",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Thin Film",
+			"IOR - 3"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_080",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_emission = True",
+			"create_texture2d_image('emissiveWeight.png', 'Standard surface', 'emission_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveWeight.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_081",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_emission = True",
+			"create_texture2d_image('emissiveWeight.tga', 'Standard surface', 'emission_weight')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveWeight.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_082",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_emission = True",
+			"create_texture2d_image('emissiveColor.png', 'Standard surface', 'emission_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveColor.png"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_083",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_emission = True",
+			"create_texture2d_image('emissiveColor.tga', 'Standard surface', 'emission_color')",
+			"usd_render(case)",
+			"delete_texture2d_image()"
+		],
+		"script_info": [
+			"emissiveColor.tga"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_084",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_emission = True",
+			"nd_surfaceshader['in_emission'] = 1",
+			"nd_surfaceshader['in_emission_color'] = (0, 0.1, 1)",
+			"nd_surfaceshader['in_emission_weight'] = 0",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emission",
+			"Color - RGB: 0, 0.1, 1",
+			"Emission Weight - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	},
+	{
+		"case": "USD_BL_MTX_SS_085",
+		"status": "active",
+		"functions": [
+			"default_settings()",
+			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
+			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"ss_node.f_emission = True",
+			"nd_surfaceshader['in_emission'] = 1",
+			"nd_surfaceshader['in_emission_color'] = (0, 0.1, 1)",
+			"set_value(nd_surfaceshader, 'in_emission_weight', 0.5)",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Emission",
+			"Color - RGB: 0, 0.1, 1",
+			"Emission Weight - 0"
+		],
+		"scene": "MaterialX_SS.blend"
+	}
+]

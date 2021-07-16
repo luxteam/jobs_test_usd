@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<job-manifest enable="False">
+
+    <outpath value="{OutputDir}"/>
+
+    <execute command='python "{ResourcesDir}/simpleRender.py"' timeout="3000">
+        <argument>--tool "{Tool}"</argument>
+        <argument>--output "{OutputDir}"</argument>
+        <argument>--testType MaterialX_Standart_Surface</argument>
+        <argument>--resolution_x {rx}</argument>
+        <argument>--resolution_y {ry}</argument>
+        <argument>--res_path "{ScenesDir}"/Materials</argument>
+        <argument>--testCases "{TestCases}"</argument>
+        <argument>--delegate "{delegate}"</argument>
+        <argument>--retries {retries}</argument>
+        <argument>--update_refs "{UpdateRefs}"</argument>
+    </execute>
+
+    <execute command='python "{ResourcesDir}/syncTime.py"'>
+        <argument>--work_dir "{OutputDir}"</argument>
+    </execute>
+
+    <execute command='python "{CommonDir}/scripts/makeReport.py"'>
+        <argument>--work_dir "{OutputDir}"</argument>
+    </execute>
+
+    <execute command='python "{CommonDir}/scripts/compareByJSON.py"'>
+        <argument>--work_dir "{OutputDir}"</argument>
+        <argument>--base_dir "{BaselineDir}"</argument>
+        <argument>--update_refs "{UpdateRefs}"</argument>
+    </execute>
+
+    <execute command='python "{CWD}/Scripts/refactor_logs.py"' timeout="60">
+        <argument>--output "{OutputDir}"</argument>
+    </execute>
+
+</job-manifest>
