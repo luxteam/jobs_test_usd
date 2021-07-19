@@ -1475,7 +1475,7 @@
 			"ss_node.f_emission = True",
 			"nd_surfaceshader['in_emission'] = 1",
 			"nd_surfaceshader['in_emission_color'] = (0, 0.1, 1)",
-			"set_value(nd_surfaceshader, 'in_emission_inbtensity', 10)",
+			"set_value(nd_surfaceshader, 'in_emission_intensity', 10)",
 			"usd_render(case)"
 		],
 		"script_info": [
