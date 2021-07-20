@@ -138,7 +138,7 @@
 		"case": "USD_SM_011",
 		"status": "active",
 		"functions": [
-			"bpy.data.node_groups['NodeTree'].nodes['USD File']['filename'] = os.path.join(RES_PATH, 'TestExportNoLight.usda')",
+			"bpy.data.node_groups['NodeTree'].nodes['USD File'].filename = os.path.join(RES_PATH, 'TestExportNoLight.usda')",
 			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
 			"usd_render(case)",
 			"bpy.ops.hdusd.data_source(data_source='')"
@@ -152,7 +152,7 @@
 		"case": "USD_SM_012",
 		"status": "active",
 		"functions": [
-			"bpy.data.node_groups['NodeTree'].nodes['USD File']['filename'] = os.path.join(RES_PATH, 'TestExport.usda')",
+			"bpy.data.node_groups['NodeTree'].nodes['USD File'].filename = os.path.join(RES_PATH, 'TestExport.usda')",
 			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
 			"usd_render(case)",
 			"bpy.ops.hdusd.data_source(data_source='')"
@@ -166,7 +166,7 @@
 		"case": "USD_SM_013",
 		"status": "active",
 		"functions": [
-			"bpy.data.node_groups['NodeTree'].nodes['USD File']['filename'] = os.path.join(RES_PATH, 'TestExport_StS.usda')",
+			"bpy.data.node_groups['NodeTree'].nodes['USD File'].filename = os.path.join(RES_PATH, 'TestExport_StS.usda')",
 			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
 			"usd_render(case)",
 			"bpy.ops.hdusd.data_source(data_source='')"
