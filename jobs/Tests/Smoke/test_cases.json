@@ -121,5 +121,59 @@
 			"4k resolution"
 		],
 		"scene": "USD_Smoke.blend"
+	},
+	{
+		"case": "USD_SM_010",
+		"status": "active",
+		"functions": [
+			"bpy.ops.wm.usd_export(filepath=os.path.join(WORK_DIR, 'Color', case['case'] + '.usd'))",
+			"usd_render(case)"
+		],
+		"script_info": [
+			"Export USD"
+		],
+		"scene": "USD_SimpleTest.blend"
+	},
+	{
+		"case": "USD_SM_011",
+		"status": "active",
+		"functions": [
+			"bpy.data.node_groups['NodeTree'].nodes['USD File']['filename'] = os.path.join(RES_PATH, 'TestExportNoLight.usda')",
+			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
+			"usd_render(case)",
+			"bpy.ops.hdusd.data_source(data_source='')"
+		],
+		"script_info": [
+			"Import USD"
+		],
+		"scene": "USD_SimpleTest.blend"
+	},
+	{
+		"case": "USD_SM_012",
+		"status": "active",
+		"functions": [
+			"bpy.data.node_groups['NodeTree'].nodes['USD File']['filename'] = os.path.join(RES_PATH, 'TestExport.usda')",
+			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
+			"usd_render(case)",
+			"bpy.ops.hdusd.data_source(data_source='')"
+		],
+		"script_info": [
+			"Import USD with Lights"
+		],
+		"scene": "USD_SimpleTest.blend"
+	},
+	{
+		"case": "USD_SM_013",
+		"status": "active",
+		"functions": [
+			"bpy.data.node_groups['NodeTree'].nodes['USD File']['filename'] = os.path.join(RES_PATH, 'TestExport_StS.usda')",
+			"bpy.ops.hdusd.data_source(data_source='NodeTree')",
+			"usd_render(case)",
+			"bpy.ops.hdusd.data_source(data_source='')"
+		],
+		"script_info": [
+			"Import USD with MaterialX"
+		],
+		"scene": "USD_SimpleTest.blend"
 	}
 ]
