@@ -33,9 +33,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_base'] = 0",
-			"nd_surfaceshader['in_diffuse_roughness'] = 0",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base = 0",
+			"nd_surfaceshader.in_diffuse_roughness = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -50,9 +50,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_base'] = 0.5",
-			"nd_surfaceshader['in_diffuse_roughness'] = 0.5",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base = 0.5",
+			"nd_surfaceshader.in_diffuse_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -67,9 +67,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_base'] = 1",
-			"nd_surfaceshader['in_diffuse_roughness'] = 1",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base = 1",
+			"nd_surfaceshader.in_diffuse_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -84,10 +84,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_base'] = 0.8",
-			"nd_surfaceshader['in_diffuse_roughness'] = 0.5",
-			"nd_surfaceshader['in_metalness'] = 0.5",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base = 0.8",
+			"nd_surfaceshader.in_diffuse_roughness = 0.5",
+			"nd_surfaceshader.in_metalness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -103,10 +103,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_base'] = 0.5",
-			"nd_surfaceshader['in_diffuse_roughness'] = 0.5",
-			"nd_surfaceshader['in_metalness'] = 1",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base = 0.5",
+			"nd_surfaceshader.in_diffuse_roughness = 0.5",
+			"nd_surfaceshader.in_metalness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -122,7 +122,7 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"create_texture2d_image('diffuseWeight.png', 'Standard surface', 'base_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -138,7 +138,7 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"create_texture2d_image('diffuseWeight.tga', 'Standard surface', 'base_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -256,9 +256,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular'] = 0",
+			"nd_surfaceshader.in_specular = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -273,10 +273,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_roughness'] = 0.5",
-    		"nd_surfaceshader['in_specular_anisotropy'] = 0.5",
+			"nd_surfaceshader.in_specular_roughness = 0.5",
+    		"nd_surfaceshader.in_specular_anisotropy = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -291,10 +291,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_roughness'] = 0.5",
-    		"nd_surfaceshader['in_specular_anisotropy'] = 1",
+			"nd_surfaceshader.in_specular_roughness = 0.5",
+    		"nd_surfaceshader.in_specular_anisotropy = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -309,11 +309,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_roughness'] = 0.5",
-    		"nd_surfaceshader['in_specular_anisotropy'] = 1",
-			"nd_surfaceshader['in_specular_rotation'] = 0.125",
+			"nd_surfaceshader.in_specular_roughness = 0.5",
+    		"nd_surfaceshader.in_specular_anisotropy = 1",
+			"nd_surfaceshader.in_specular_rotation = 0.125",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -329,11 +329,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_roughness'] = 0.5",
-    		"nd_surfaceshader['in_specular_anisotropy'] = 1",
-			"nd_surfaceshader['in_specular_rotation'] = 0.25",
+			"nd_surfaceshader.in_specular_roughness = 0.5",
+    		"nd_surfaceshader.in_specular_anisotropy = 1",
+			"nd_surfaceshader.in_specular_rotation = 0.25",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -349,9 +349,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_roughness'] = 0.5",
+			"nd_surfaceshader.in_specular_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -366,9 +366,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_roughness'] = 1",
+			"nd_surfaceshader.in_specular_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -383,9 +383,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_IOR'] = 1",
+			"nd_surfaceshader.in_specular_IOR = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -400,9 +400,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_specular = True",
-			"nd_surfaceshader['in_specular_IOR'] = 3",
+			"nd_surfaceshader.in_specular_IOR = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -481,9 +481,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission'] = 0",
+			"nd_surfaceshader.in_transmission = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -497,9 +497,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission'] = 0.5",
+			"nd_surfaceshader.in_transmission = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -513,9 +513,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_depth'] = 1",
+			"nd_surfaceshader.in_transmission_depth = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -529,9 +529,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_depth'] = 10",
+			"nd_surfaceshader.in_transmission_depth = 10",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -545,10 +545,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_depth'] = 5",
-			"nd_surfaceshader['in_transmission_scatter'] = (0.4, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_depth = 5",
+			"nd_surfaceshader.in_transmission_scatter = (0.4, 0, 0.4)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -562,9 +562,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_scatter_anisotropy'] = 0.5",
+			"nd_surfaceshader.in_transmission_scatter_anisotropy = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -578,9 +578,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_scatter_anisotropy'] = 1",
+			"nd_surfaceshader.in_transmission_scatter_anisotropy = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -594,9 +594,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_dispersion'] = 1",
+			"nd_surfaceshader.in_transmission_dispersion = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -610,9 +610,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_dispersion'] = 10",
+			"nd_surfaceshader.in_transmission_dispersion = 10",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -626,9 +626,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_extra_roughness'] = 0.5",
+			"nd_surfaceshader.in_transmission_extra_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -642,9 +642,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_transmission_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_transmission_color = (0, 0, 0.4)",
 			"ss_node.f_transmission = True",
-			"nd_surfaceshader['in_transmission_extra_roughness'] = 1",
+			"nd_surfaceshader.in_transmission_extra_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -723,8 +723,8 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 1",
-			"nd_surfaceshader['in_subsurface_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_subsurface = 1",
+			"nd_surfaceshader.in_subsurface_color = (0, 0.4, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -739,7 +739,7 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 0",
+			"nd_surfaceshader.in_subsurface = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -754,7 +754,7 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 0.5",
+			"nd_surfaceshader.in_subsurface = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -769,8 +769,8 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 1",
-			"nd_surfaceshader['in_subsurface_radius'] = (0, 0.6, 0)",
+			"nd_surfaceshader.in_subsurface = 1",
+			"nd_surfaceshader.in_subsurface_radius = (0, 0.6, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -785,8 +785,8 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 1",
-			"nd_surfaceshader['in_subsurface_radius'] = (0.6, 0, 0)",
+			"nd_surfaceshader.in_subsurface = 1",
+			"nd_surfaceshader.in_subsurface_radius = (0.6, 0, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -801,8 +801,8 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 1",
-			"nd_surfaceshader['in_subsurface_scale'] = 5",
+			"nd_surfaceshader.in_subsurface = 1",
+			"nd_surfaceshader.in_subsurface_scale = 5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -817,8 +817,8 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 1",
-			"nd_surfaceshader['in_subsurface_scale'] = 10",
+			"nd_surfaceshader.in_subsurface = 1",
+			"nd_surfaceshader.in_subsurface_scale = 10",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -833,8 +833,8 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 1",
-			"nd_surfaceshader['in_subsurface_anisotropy'] = 0.5",
+			"nd_surfaceshader.in_subsurface = 1",
+			"nd_surfaceshader.in_subsurface_anisotropy = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -849,8 +849,8 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_subsurface = True",
-			"nd_surfaceshader['in_subsurface'] = 1",
-			"nd_surfaceshader['in_subsurface_anisotropy'] = 1",
+			"nd_surfaceshader.in_subsurface = 1",
+			"nd_surfaceshader.in_subsurface_anisotropy = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -864,10 +864,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_sheen = True",
-			"nd_surfaceshader['in_sheen'] = 1",
-			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"nd_surfaceshader.in_sheen = 1",
+			"nd_surfaceshader.in_sheen_color = (0, 1, 1)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -882,10 +882,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_sheen = True",
-			"nd_surfaceshader['in_sheen'] = 0",
-			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"nd_surfaceshader.in_sheen = 0",
+			"nd_surfaceshader.in_sheen_color = (0, 1, 1)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -900,10 +900,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_sheen = True",
-			"nd_surfaceshader['in_sheen'] = 0.5",
-			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
+			"nd_surfaceshader.in_sheen = 0.5",
+			"nd_surfaceshader.in_sheen_color = (0, 1, 1)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -918,11 +918,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_sheen = True",
-			"nd_surfaceshader['in_sheen'] = 1",
-			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
-			"nd_surfaceshader['in_sheen_roughness'] = 0.5",
+			"nd_surfaceshader.in_sheen = 1",
+			"nd_surfaceshader.in_sheen_color = (0, 1, 1)",
+			"nd_surfaceshader.in_sheen_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -937,11 +937,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_sheen = True",
-			"nd_surfaceshader['in_sheen'] = 1",
-			"nd_surfaceshader['in_sheen_color'] = (0, 1, 1)",
-			"nd_surfaceshader['in_sheen_roughness'] = 1",
+			"nd_surfaceshader.in_sheen = 1",
+			"nd_surfaceshader.in_sheen_color = (0, 1, 1)",
+			"nd_surfaceshader.in_sheen_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -957,7 +957,7 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader.in_coat = 1",
 			"create_texture2d_image('coatColor.png', 'Standard surface', 'coat_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -974,7 +974,7 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
+			"nd_surfaceshader.in_coat = 1",
 			"create_texture2d_image('coatColor.tga', 'Standard surface', 'coat_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -990,10 +990,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1008,10 +1008,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 0",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader.in_coat = 0",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1026,10 +1026,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 0.5",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
+			"nd_surfaceshader.in_coat = 0.5",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1044,11 +1044,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_roughness'] = 0.5",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1063,11 +1063,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_roughness'] = 1",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1082,11 +1082,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_anisotropy'] = 0.5",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_anisotropy = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1101,11 +1101,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_anisotropy'] = 1",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_anisotropy = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1120,12 +1120,12 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_anisotropy'] = 0.5",
-			"nd_surfaceshader['in_coat_rotation'] = 0.5",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_anisotropy = 0.5",
+			"nd_surfaceshader.in_coat_rotation = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1140,12 +1140,12 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_anisotropy'] = 0.5",
-			"nd_surfaceshader['in_coat_rotation'] = 1",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_anisotropy = 0.5",
+			"nd_surfaceshader.in_coat_rotation = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1160,11 +1160,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_IOR'] = 1",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_IOR = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1179,11 +1179,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_IOR'] = 3",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_IOR = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1198,11 +1198,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_affect_color'] = 0.5",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_affect_color = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1217,11 +1217,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_affect_color'] = 1",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_affect_color = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1236,12 +1236,12 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_affect_color'] = 0.5",
-			"nd_surfaceshader['in_coat_affect_roughness'] = 0.5",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_affect_color = 0.5",
+			"nd_surfaceshader.in_coat_affect_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1256,12 +1256,12 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_base_color = (0, 0.4, 0)",
 			"ss_node.f_coat = True",
-			"nd_surfaceshader['in_coat'] = 1",
-			"nd_surfaceshader['in_coat_color'] = (0, 1, 0)",
-			"nd_surfaceshader['in_coat_affect_color'] = 0.5",
-			"nd_surfaceshader['in_coat_affect_roughness'] = 1",
+			"nd_surfaceshader.in_coat = 1",
+			"nd_surfaceshader.in_coat_color = (0, 1, 0)",
+			"nd_surfaceshader.in_coat_affect_color = 0.5",
+			"nd_surfaceshader.in_coat_affect_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1276,9 +1276,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_thin_film = True",
-			"nd_surfaceshader['in_thin_film_thickness'] = 1",
+			"nd_surfaceshader.in_thin_film_thickness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1293,9 +1293,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_thin_film = True",
-			"nd_surfaceshader['in_thin_film_thickness'] = 10",
+			"nd_surfaceshader.in_thin_film_thickness = 10",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1310,9 +1310,9 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_thin_film = True",
-			"nd_surfaceshader['in_thin_film_thickness'] = 50",
+			"nd_surfaceshader.in_thin_film_thickness = 50",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1327,10 +1327,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_thin_film = True",
-			"nd_surfaceshader['in_thin_film_thickness'] = 1",
-			"nd_surfaceshader['in_thin_film_IOR'] = 1",
+			"nd_surfaceshader.in_thin_film_thickness = 1",
+			"nd_surfaceshader.in_thin_film_IOR = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1345,10 +1345,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_thin_film = True",
-			"nd_surfaceshader['in_thin_film_thickness'] = 1",
-			"nd_surfaceshader['in_thin_film_IOR'] = 3",
+			"nd_surfaceshader.in_thin_film_thickness = 1",
+			"nd_surfaceshader.in_thin_film_IOR = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1363,7 +1363,7 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_emission = True",
 			"create_texture2d_image('emissiveWeight.png', 'Standard surface', 'emission_weight')",
 			"usd_render(case)",
@@ -1380,7 +1380,7 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_emission = True",
 			"create_texture2d_image('emissiveWeight.tga', 'Standard surface', 'emission_weight')",
 			"usd_render(case)",
@@ -1397,7 +1397,7 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_emission = True",
 			"create_texture2d_image('emissiveColor.png', 'Standard surface', 'emission_color')",
 			"usd_render(case)",
@@ -1414,7 +1414,7 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_emission = True",
 			"create_texture2d_image('emissiveColor.tga', 'Standard surface', 'emission_color')",
 			"usd_render(case)",
@@ -1431,11 +1431,11 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_emission = True",
-			"nd_surfaceshader['in_emission'] = 1",
-			"nd_surfaceshader['in_emission_color'] = (0, 0.1, 1)",
-			"nd_surfaceshader['in_emission_weight'] = 0",
+			"nd_surfaceshader.in_emission = 1",
+			"nd_surfaceshader.in_emission_color = (0, 0.1, 1)",
+			"set_value(nd_surfaceshader, 'in_emission_weight', 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1451,10 +1451,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_emission = True",
-			"nd_surfaceshader['in_emission'] = 1",
-			"nd_surfaceshader['in_emission_color'] = (0, 0.1, 1)",
+			"nd_surfaceshader.in_emission = 1",
+			"nd_surfaceshader.in_emission_color = (0, 0.1, 1)",
 			"set_value(nd_surfaceshader, 'in_emission_weight', 0.5)",
 			"usd_render(case)"
 		],
@@ -1471,10 +1471,10 @@
 		"functions": [
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_base_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_base_color = (0, 0, 0.4)",
 			"ss_node.f_emission = True",
-			"nd_surfaceshader['in_emission'] = 1",
-			"nd_surfaceshader['in_emission_color'] = (0, 0.1, 1)",
+			"nd_surfaceshader.in_emission = 1",
+			"nd_surfaceshader.in_emission_color = (0, 0.1, 1)",
 			"set_value(nd_surfaceshader, 'in_emission_intensity', 10)",
 			"usd_render(case)"
 		],
@@ -1524,7 +1524,7 @@
 			"default_settings()",
 			"ss_node, nd_surfaceshader = get_node_and_surfaceshader()",
 			"ss_node.f_geometry = True",
-			"nd_surfaceshader['in_thin_walled'] = 1",
+			"nd_surfaceshader.in_thin_walled = True",
 			"usd_render(case)"
 		],
 		"script_info": [

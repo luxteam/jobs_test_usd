@@ -33,9 +33,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_uber_diffuse_weight'] = 0.0",
-			"nd_surfaceshader['in_uber_diffuse_roughness'] = 0.0",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_weight = 0.0",
+			"nd_surfaceshader.in_uber_diffuse_roughness = 0.0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -52,9 +52,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_uber_diffuse_weight'] = 0.5",
-			"nd_surfaceshader['in_uber_diffuse_roughness'] = 0.5",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_weight = 0.5",
+			"nd_surfaceshader.in_uber_diffuse_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -71,9 +71,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
-			"nd_surfaceshader['in_uber_diffuse_weight'] = 1.0",
-			"nd_surfaceshader['in_uber_diffuse_roughness'] = 1.0",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_weight = 1.0",
+			"nd_surfaceshader.in_uber_diffuse_roughness = 1.0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -90,7 +90,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"create_texture2d_image('diffuseWeight.png', 'RPR Uber', 'uber_diffuse_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -106,7 +106,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"create_texture2d_image('diffuseWeight.tga', 'RPR Uber', 'uber_diffuse_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -224,9 +224,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_weight'] = 0.0",
+			"nd_surfaceshader.in_uber_reflection_weight = 0.0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -240,10 +240,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 0.5",
-			"nd_surfaceshader['in_uber_reflection_anisotropy'] = 0.5",
+			"nd_surfaceshader.in_uber_reflection_roughness = 0.5",
+			"nd_surfaceshader.in_uber_reflection_anisotropy = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -257,10 +257,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 0.5",
-			"nd_surfaceshader['in_uber_reflection_anisotropy'] = 1",
+			"nd_surfaceshader.in_uber_reflection_roughness = 0.5",
+			"nd_surfaceshader.in_uber_reflection_anisotropy = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -274,11 +274,11 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 0.5",
-			"nd_surfaceshader['in_uber_reflection_anisotropy'] = 1",
-			"nd_surfaceshader['in_uber_reflection_anisotropy_rotation'] = 0.25",
+			"nd_surfaceshader.in_uber_reflection_roughness = 0.5",
+			"nd_surfaceshader.in_uber_reflection_anisotropy = 1",
+			"nd_surfaceshader.in_uber_reflection_anisotropy_rotation = 0.25",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -293,9 +293,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 0",
+			"nd_surfaceshader.in_uber_reflection_roughness = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -309,9 +309,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"nd_surfaceshader.in_uber_reflection_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -325,9 +325,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_ior'] = 0",
+			"nd_surfaceshader.in_uber_reflection_ior = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -341,9 +341,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_ior'] = 3",
+			"nd_surfaceshader.in_uber_reflection_ior = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -357,9 +357,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_fresnel_schlick_approximation'] = 0.5",
+			"nd_surfaceshader.in_uber_fresnel_schlick_approximation = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -373,9 +373,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_reflection_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_color = (0, 0, 0.4)",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_fresnel_schlick_approximation'] = 3",
+			"nd_surfaceshader.in_uber_fresnel_schlick_approximation = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -390,7 +390,7 @@
 			"default_settings()",
 			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'Metalness'",
 			"create_texture2d_image('reflectionColor.png', 'RPR Uber', 'uber_reflection_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -408,7 +408,7 @@
 			"default_settings()",
 			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'Metalness'",
 			"create_texture2d_image('reflectionColor.tga', 'RPR Uber', 'uber_reflection_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -426,7 +426,7 @@
 			"default_settings()",
 			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'Metalness'",
 			"create_texture2d_image('reflectionWeight.png', 'RPR Uber', 'uber_reflection_weight')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -444,7 +444,7 @@
 			"default_settings()",
 			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'Metalness'",
 			"create_texture2d_image('reflectionWeight.tga', 'RPR Uber', 'uber_reflection_weight')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -462,8 +462,8 @@
 			"default_settings()",
 			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
-			"nd_surfaceshader['in_uber_reflection_metalness'] = 0.5",
+			"nd_surfaceshader.in_uber_reflection_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_reflection_metalness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -478,8 +478,8 @@
 			"default_settings()",
 			"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_reflection = True",
-			"nd_surfaceshader['in_uber_reflection_mode'] = 1",
-			"nd_surfaceshader['in_uber_reflection_metalness'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_reflection_metalness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -493,7 +493,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
 			"rpr_uber.f_refraction = True",
 			"create_texture2d_image('refractionColor.png', 'RPR Uber', 'uber_refraction_color')",
 			"usd_render(case)",
@@ -510,7 +510,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
 			"rpr_uber.f_refraction = True",
 			"create_texture2d_image('refractionColor.tga', 'RPR Uber', 'uber_refraction_color')",
 			"usd_render(case)",
@@ -527,7 +527,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
 			"rpr_uber.f_refraction = True",
 			"create_texture2d_image('refractionWeight.png', 'RPR Uber', 'uber_refraction_weight')",
 			"usd_render(case)",
@@ -544,7 +544,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
 			"rpr_uber.f_refraction = True",
 			"create_texture2d_image('refractionWeight.tga', 'RPR Uber', 'uber_refraction_weight')",
 			"usd_render(case)",
@@ -561,10 +561,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_refraction = True",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
-			"nd_surfaceshader['in_uber_refraction_thin_surface'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
+			"nd_surfaceshader.in_uber_refraction_thin_surface = True",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -579,10 +579,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_refraction = True",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
-			"nd_surfaceshader['in_uber_refraction_weight'] = 0",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
+			"nd_surfaceshader.in_uber_refraction_weight = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -597,10 +597,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_refraction = True",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
-			"nd_surfaceshader['in_uber_refraction_weight'] = 0.5",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
+			"nd_surfaceshader.in_uber_refraction_weight = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -615,10 +615,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_refraction = True",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
-			"nd_surfaceshader['in_uber_refraction_roughness'] = 0.5",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
+			"nd_surfaceshader.in_uber_refraction_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -633,10 +633,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_refraction = True",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
-			"nd_surfaceshader['in_uber_refraction_roughness'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
+			"nd_surfaceshader.in_uber_refraction_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -651,11 +651,11 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_refraction = True",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
-			"nd_surfaceshader['in_uber_refraction_absorption_color'] = (0.0, 1.0, 0.0)",
-			"nd_surfaceshader['in_uber_refraction_absorption_distance'] = 1",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
+			"nd_surfaceshader.in_uber_refraction_absorption_color = (0.0, 1.0, 0.0)",
+			"nd_surfaceshader.in_uber_refraction_absorption_distance = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -669,11 +669,11 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_refraction = True",
-			"set_value(nd_surfaceshader, 'in_uber_reflection_mode', 'IOR')",
-			"nd_surfaceshader['in_uber_refraction_absorption_color'] = (0.0, 1.0, 0.0)",
-			"nd_surfaceshader['in_uber_refraction_absorption_distance'] = 5",
+			"nd_surfaceshader.in_uber_reflection_mode = 'IOR'",
+			"nd_surfaceshader.in_uber_refraction_absorption_color = (0.0, 1.0, 0.0)",
+			"nd_surfaceshader.in_uber_refraction_absorption_distance = 5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -688,7 +688,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
 			"create_texture2d_image('coatColor.png', 'RPR Uber', 'uber_coating_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -706,7 +706,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
 			"create_texture2d_image('coatColor.tga', 'RPR Uber', 'uber_coating_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -723,9 +723,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -740,10 +740,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_weight'] = 0.0",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_weight = 0.0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -759,10 +759,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_weight'] = 0.5",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_weight = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -778,10 +778,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_roughness'] = 0.5",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -797,10 +797,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_roughness'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -816,10 +816,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_ior'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_ior = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -835,10 +835,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_ior'] = 3",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_ior = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -854,10 +854,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_thickness'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_thickness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -873,10 +873,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_thickness'] = 3",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_thickness = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -892,10 +892,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 0",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.8, 0)",
+			"nd_surfaceshader.in_uber_coating_mode = 'PBR'",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.8, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -912,7 +912,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
 			"create_texture2d_image('coatColor.png', 'RPR Uber', 'uber_coating_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -930,7 +930,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
 			"create_texture2d_image('coatColor.tga', 'RPR Uber', 'uber_coating_color')",
 			"usd_render(case)",
 			"delete_texture2d_image()"
@@ -947,9 +947,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -964,10 +964,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_weight'] = 0.0",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_weight = 0.0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -983,10 +983,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_weight'] = 0.5",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_weight = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1002,10 +1002,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_roughness'] = 0.5",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_roughness = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1021,10 +1021,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_roughness'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_roughness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1040,10 +1040,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_ior'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_ior = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1059,10 +1059,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_ior'] = 3",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_ior = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1078,10 +1078,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_thickness'] = 1",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_thickness = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1097,10 +1097,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_thickness'] = 3",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_thickness = 3",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1116,10 +1116,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.4, 0)",
 			"rpr_uber.f_coating = True",
-			"nd_surfaceshader['in_uber_coating_mode'] = 1",
-			"nd_surfaceshader['in_uber_coating_transmission_color'] = (0, 0.8, 0)",
+			"nd_surfaceshader.in_uber_coating_mode = 'Metalness'",
+			"nd_surfaceshader.in_uber_coating_transmission_color = (0, 0.8, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1135,10 +1135,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_roughness = 1",
 			"rpr_uber.f_sheen = True",
-			"nd_surfaceshader['in_uber_sheen'] = (1, 1, 1)",
+			"nd_surfaceshader.in_uber_sheen = (1, 1, 1)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1152,11 +1152,11 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_roughness = 1",
 			"rpr_uber.f_sheen = True",
-			"nd_surfaceshader['in_uber_sheen'] = (1, 1, 1)",
-			"nd_surfaceshader['in_uber_sheen_weight'] = 0",
+			"nd_surfaceshader.in_uber_sheen = (1, 1, 1)",
+			"nd_surfaceshader.in_uber_sheen_weight = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1171,11 +1171,11 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_roughness = 1",
 			"rpr_uber.f_sheen = True",
-			"nd_surfaceshader['in_uber_sheen'] = (1, 1, 1)",
-			"nd_surfaceshader['in_uber_sheen_weight'] = 0.5",
+			"nd_surfaceshader.in_uber_sheen = (1, 1, 1)",
+			"nd_surfaceshader.in_uber_sheen_weight = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1190,10 +1190,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_roughness = 1",
 			"rpr_uber.f_sheen = True",
-			"nd_surfaceshader['in_uber_sheen_tint'] = 0",
+			"nd_surfaceshader.in_uber_sheen_tint = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1207,10 +1207,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
-			"nd_surfaceshader['in_uber_reflection_roughness'] = 1",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_reflection_roughness = 1",
 			"rpr_uber.f_sheen = True",
-			"nd_surfaceshader['in_uber_sheen_tint'] = 1",
+			"nd_surfaceshader.in_uber_sheen_tint = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1224,7 +1224,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_emission = True",
 			"create_texture2d_image('emissiveColor.png', 'RPR Uber', 'uber_emission_color')",
 			"usd_render(case)",
@@ -1241,7 +1241,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_emission = True",
 			"create_texture2d_image('emissiveColor.tga', 'RPR Uber', 'uber_emission_color')",
 			"usd_render(case)",
@@ -1258,7 +1258,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_emission = True",
 			"create_texture2d_image('emissiveWeight.png', 'RPR Uber', 'uber_emission_weight')",
 			"usd_render(case)",
@@ -1275,7 +1275,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"rpr_uber.f_emission = True",
 			"create_texture2d_image('emissiveWeight.tga', 'RPR Uber', 'uber_emission_weight')",
 			"usd_render(case)",
@@ -1292,9 +1292,9 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_emission = True",
-			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
+			"nd_surfaceshader.in_uber_emission_color = (0, 0.1, 1)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1309,10 +1309,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_emission = True",
-			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
-			"nd_surfaceshader['in_uber_emission_weight'] = 0",
+			"nd_surfaceshader.in_uber_emission_color = (0, 0.1, 1)",
+			"nd_surfaceshader.in_uber_emission_weight = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1328,10 +1328,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_emission = True",
-			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
-			"nd_surfaceshader['in_uber_emission_weight'] = 0.5",
+			"nd_surfaceshader.in_uber_emission_color = (0, 0.1, 1)",
+			"nd_surfaceshader.in_uber_emission_weight = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1347,10 +1347,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_emission = True",
-			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
-			"set_value(nd_surfaceshader, 'in_uber_emission_intensity', 0)",
+			"nd_surfaceshader.in_uber_emission_color = (0, 0.1, 1)",
+			"nd_surfaceshader.in_uber_emission_intensity = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1366,10 +1366,10 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_emission = True",
-			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
-			"set_value(nd_surfaceshader, 'in_uber_emission_intensity', 100)",
+			"nd_surfaceshader.in_uber_emission_color = (0, 0.1, 1)",
+			"nd_surfaceshader.in_uber_emission_intensity = 100",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1385,11 +1385,11 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0.4, 0)",
 			"rpr_uber.f_emission = True",
-			"nd_surfaceshader['in_uber_emission_color'] = (0, 0.1, 1)",
-			"set_value(nd_surfaceshader, 'in_uber_emission_intensity', 3)",
-			"nd_surfaceshader['in_uber_emission_mode'] = 1",
+			"nd_surfaceshader.in_uber_emission_color = (0, 0.1, 1)",
+			"nd_surfaceshader.in_uber_emission_intensity = 3",
+			"nd_surfaceshader.in_uber_emission_mode = 'Doublesided'",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1438,7 +1438,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_transparency = True",
-			"nd_surfaceshader['in_uber_transparency'] = 0",
+			"nd_surfaceshader.in_uber_transparency = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1453,7 +1453,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_transparency = True",
-			"nd_surfaceshader['in_uber_transparency'] = 0.5",
+			"nd_surfaceshader.in_uber_transparency = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1548,7 +1548,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_subsurface = True",
-			"nd_surfaceshader['in_uber_sss_multiscatter'] = 1",
+			"nd_surfaceshader.in_uber_sss_multiscatter = True",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1564,7 +1564,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_subsurface = True",
-			"nd_surfaceshader['in_uber_sss_scatter_color'] = (0, 0.4, 0)",
+			"nd_surfaceshader.in_uber_sss_scatter_color = (0, 0.4, 0)",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1580,7 +1580,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_subsurface = True",
-			"nd_surfaceshader['in_uber_sss_weight'] = 0",
+			"nd_surfaceshader.in_uber_sss_weight = 0",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1596,7 +1596,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_subsurface = True",
-			"nd_surfaceshader['in_uber_sss_weight'] = 0.5",
+			"nd_surfaceshader.in_uber_sss_weight = 0.5",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1612,7 +1612,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_subsurface = True",
-			"nd_surfaceshader['in_uber_sss_scatter_direction'] = -1",
+			"nd_surfaceshader.in_uber_sss_scatter_direction = -1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1628,7 +1628,7 @@
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
 			"rpr_uber.f_subsurface = True",
-			"nd_surfaceshader['in_uber_sss_scatter_direction'] = 1",
+			"nd_surfaceshader.in_uber_sss_scatter_direction = 1",
 			"usd_render(case)"
 		],
 		"script_info": [
@@ -1673,7 +1673,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"create_rpr_normalmap('RPR Uber', 'uber_diffuse_normal')",
 			"create_texture2d_image('normal.png', 'RPR Normal Map', 'color')",
 			"usd_render(case)",
@@ -1691,7 +1691,7 @@
 		"functions": [
 			"default_settings()",
     		"rpr_uber, nd_surfaceshader = get_node_and_surfaceshader()",
-			"nd_surfaceshader['in_uber_diffuse_color'] = (0, 0, 0.4)",
+			"nd_surfaceshader.in_uber_diffuse_color = (0, 0, 0.4)",
 			"create_rpr_normalmap('RPR Uber', 'uber_diffuse_normal')",
 			"create_texture2d_image('normal.tga', 'RPR Normal Map', 'color')",
 			"usd_render(case)",
